@@ -6,4 +6,7 @@ lib_list =
  "Distributions", "CSV", "StatsBase"]
 
 @time Pkg.add(string.(lib_list))
-# @time require(NearestNeighbors, DataFrames, LightGraphs, Profile, Plots, Statistics, Random, Distributions, CSV)
+
+@time using NearestNeighbors, DataFrames, LightGraphs
+@time using Profile, Plots, Statistics, Random
+@time using Distributions, CSV, StatsBase
