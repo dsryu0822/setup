@@ -3,12 +3,14 @@ using Pkg
 lib_list =
  ["NearestNeighbors", "DataFrames", "Graphs",
  "Profile", "Plots", "Statistics", "Random",
- "Distributions", "XLSX", "CSV", "StatsBase", "LaTeXStrings",
- "StatsPlots", "Pluto"]
+ "Distributions", "StatsBase", "LaTeXStrings",
+ "StatsPlots", "Pluto",
+ "JSON", "CSV", "XLSX"]
 
 @time Pkg.add(string.(lib_list))
 
 @time using NearestNeighbors, DataFrames, Graphs
 @time using Profile, Plots, Statistics, Random
-@time using Distributions, XLSX, CSV, StatsBase, LaTeXStrings
+@time using Distributions, StatsBase, LaTeXStrings
 @time using StatsPlots, Pluto
+@time using JSON, CSV, XLSX
