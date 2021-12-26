@@ -5,7 +5,7 @@ lib_list =
  "Profile", "Plots", "Statistics", "Random",
  "Distributions", "StatsBase", "LaTeXStrings",
  "StatsPlots", "Pluto",
- "JSON", "CSV", "XLSX"]
+ "JSON", "CSV", "XLSX", "JLD"]
 
 @time Pkg.add(string.(lib_list))
 
@@ -13,4 +13,4 @@ lib_list =
 @time using Profile, Plots, Statistics, Random
 @time using Distributions, StatsBase, LaTeXStrings
 @time using StatsPlots, Pluto
-@time using JSON, CSV, XLSX
+@time using JSON, CSV, XLSX, JLD
