@@ -1,7 +1,7 @@
 using Pkg
 
 lib_list =
- ["Distances", "NearestNeighbors", "DataFrames", "Graphs",
+ ["Distances", "NearestNeighbors", "BoundingSphere", "DataFrames", "Graphs",
  "Profile", "Plots", "Statistics", "Random",
  "Distributions", "StatsBase", "LaTeXStrings",
  "StatsPlots", "Pluto",
@@ -9,7 +9,7 @@ lib_list =
 
 @time Pkg.add(string.(lib_list))
 
-@time using Distances, NearestNeighbors, DataFrames, Graphs
+@time using Distances, NearestNeighbors, BoundingSphere, DataFrames, Graphs
 @time using Profile, Plots, Statistics, Random
 @time using Distributions, StatsBase, LaTeXStrings
 @time using StatsPlots, Pluto
