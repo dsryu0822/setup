@@ -3,7 +3,7 @@ using Pkg
 lib_list =
  ["Distances", "NearestNeighbors", "BoundingSphere", "DataFrames", "Graphs",
  "Profile", "Plots", "Statistics", "Random",
- "Distributions", "StatsBase", "LaTeXStrings",
+ "Distributions", "StatsBase", "LaTeXStrings", "GLM",
  "StatsPlots", "Pluto",
  "JSON", "CSV", "XLSX", "JLD",
  "Crayons", "SMTPClient"
@@ -13,7 +13,7 @@ lib_list =
 
 @time using Distances, NearestNeighbors, BoundingSphere, DataFrames, Graphs
 @time using Profile, Plots, Statistics, Random
-@time using Distributions, StatsBase, LaTeXStrings
+@time using Distributions, StatsBase, LaTeXStrings, GLM
 @time using StatsPlots, Pluto
 @time using Crayons, SMTPClient
 @time using JSON, CSV, XLSX, JLD
