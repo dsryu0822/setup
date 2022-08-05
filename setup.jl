@@ -10,10 +10,11 @@ lib_list =
 ]
 
 @time Pkg.add(string.(lib_list))
-
-@time using Distances, NearestNeighbors, BoundingSphere, DataFrames, Graphs
-@time using Profile, Plots, Statistics, Random
-@time using Distributions, StatsBase, LaTeXStrings, GLM
-@time using StatsPlots, Pluto
-@time using JSON, CSV, XLSX, JLD, JDL2
-@time using Crayons, SMTPClient
+@time Pkg.instantiate()
+ 
+# @time using Distances, NearestNeighbors, BoundingSphere, DataFrames, Graphs
+# @time using Profile, Plots, Statistics, Random
+# @time using Distributions, StatsBase, LaTeXStrings, GLM
+# @time using StatsPlots, Pluto
+# @time using JSON, CSV, XLSX, JLD, JDL2
+# @time using Crayons, SMTPClient
