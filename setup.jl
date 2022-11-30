@@ -5,7 +5,7 @@ lib_list =
  "Profile", "Plots", "Statistics", "Random",
  "Distributions", "StatsBase", "LaTeXStrings", "GLM",
  "StatsPlots", "Pluto",
- "JSON", "CSV", "XLSX", "JLD", "JDL2",
+ "JSON", "CSV", "XLSX", "JLD2",
  "Crayons", "SMTPClient"
 ]
 
@@ -16,5 +16,5 @@ lib_list =
 # @time using Profile, Plots, Statistics, Random
 # @time using Distributions, StatsBase, LaTeXStrings, GLM
 # @time using StatsPlots, Pluto
-# @time using JSON, CSV, XLSX, JLD, JDL2
+# @time using JSON, CSV, XLSX, JLD2
 # @time using Crayons, SMTPClient
