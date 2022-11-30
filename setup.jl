@@ -18,3 +18,6 @@ lib_list =
 # @time using StatsPlots, Pluto
 # @time using JSON, CSV, XLSX, JLD2
 # @time using Crayons, SMTPClient
+
+using Pluto
+Pluto.run()
