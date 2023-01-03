@@ -14,5 +14,5 @@ lib_list =
 @time Pkg.instantiate()
  
 using Pluto, CUDA
-x = CuArray(rand(10))
+println("CUDA.functional(): ", CUDA.functional())
 Pluto.run()
