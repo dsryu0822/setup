@@ -13,5 +13,6 @@ lib_list =
 @time Pkg.add(string.(lib_list))
 @time Pkg.instantiate()
  
-using Pluto
+using Pluto, CUDA
+x = CuArray(rand(10))
 Pluto.run()
