@@ -10,8 +10,8 @@ lib_list =
  "CUDA"
 ]
 
-@time Pkg.precompile(timing=true)
 @time Pkg.add(string.(lib_list))
+@time Pkg.precompile(timing=true)
  
 using Pluto, CUDA
 println("CUDA.functional(): ", CUDA.functional())
