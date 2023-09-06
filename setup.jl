@@ -10,7 +10,7 @@ lib_list =
  "CUDA"
 ]
 
-@time Pkg.add(string.(lib_list))
+@time Pkg.add(lib_list)
 @time Pkg.precompile(timing=true)
  
 using Pluto, CUDA
