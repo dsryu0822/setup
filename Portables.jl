@@ -39,6 +39,6 @@ end
 ⊕(x, y) = [x; y]
 ⊕(x, y...) = reduce(⊕, [x, y...])
 
-@info "head, tail, argext, padmissing are defined"
-@info "operations ⊕ are defined"
-@info "Int64 is overloaded to String"
+@info """Portables.jl is loaded
+head, tail, argext, padmissing are defined
+operations ⊕ are defined"""

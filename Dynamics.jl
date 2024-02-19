@@ -20,7 +20,7 @@ function findfixed(f, x0; maxitr = 10_000, atol = 1e-6, h = 0.001)
         end
     end
     @warn """not converged...
-    $(last(L_)) < atol = $atol"""
+    $(last(L_)) > atol = $atol"""
     return x
 end
 
