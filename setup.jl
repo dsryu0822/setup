@@ -2,10 +2,10 @@ using Pkg
 
 lib_list = [
  "DataFrames", "Graphs", "CSV", "LaTeXStrings",
- "ProgressMeter", "JLD2",
- "Flux", "CUDA", 
+ "ProgressMeter", "JLD2", "OpenAI",
+ "Flux", "CUDA", "Zygote",
  "Distributions", "StatsBase", "GLM",
- # "StatsPlots", "Pluto",
+ "Pluto",
  # "JSON", "XLSX",
  # "Crayons", "SMTPClient",
  # "Distances", "NearestNeighbors", "BoundingSphere", 
