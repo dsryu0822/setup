@@ -1,18 +1,20 @@
 using Pkg
 
-lib_list =
- ["Distances", "NearestNeighbors", "BoundingSphere", "DataFrames", "Graphs",
- "Profile", "Plots", "Statistics", "Random",
- "Distributions", "StatsBase", "LaTeXStrings", "GLM",
- "StatsPlots", "Pluto",
- "JSON", "CSV", "XLSX", "JLD2",
- "Crayons", "SMTPClient",
- "CUDA"
+lib_list = [
+ "DataFrames", "Graphs", "CSV", "LaTeXStrings",
+ "ProgressMeter", "JLD2",
+ "Flux", "CUDA", 
+ "Distributions", "StatsBase", "GLM",
+ # "StatsPlots", "Pluto",
+ # "JSON", "XLSX",
+ # "Crayons", "SMTPClient",
+ # "Distances", "NearestNeighbors", "BoundingSphere", 
+ "Plots" # Too much essential
 ]
 
 @time Pkg.add(lib_list)
 @time Pkg.precompile(timing=true)
  
 using Pluto, CUDA
-println("CUDA.functional(): ", CUDA.functional())
 Pluto.run()
+println("CUDA.functional(): ", CUDA.functional())
