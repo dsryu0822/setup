@@ -9,7 +9,7 @@ lib_list = [
  # "JSON", "XLSX",
  # "Crayons", "SMTPClient",
  # "Distances", "NearestNeighbors", "BoundingSphere", 
- "Plots" # Too much essential
+ "Plots", "Colors", "ColorSchemes" # Too much essential
 ]
 
 @time Pkg.add(lib_list)
