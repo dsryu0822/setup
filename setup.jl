@@ -4,7 +4,7 @@ lib_list = [
  "DataFrames", "Graphs", "CSV", "LaTeXStrings",
  "ProgressMeter", "JLD2", "OpenAI",
  "Flux", "CUDA", "Zygote", "DecisionTree", "Clustering",
- "Distributions", "StatsBase", "GLM", "Combinatorics", 
+ "Distributions", "StatsBase", "GLM", "Combinatorics", "Symbolics",
  "Pluto", "PrettyTables",
  # "JSON", "XLSX",
  # "Crayons", "SMTPClient",
