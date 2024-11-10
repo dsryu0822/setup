@@ -1,35 +1,5 @@
 // Place your key bindings in this file to override the defaults
 [
-    // Core 1
-    {
-        "key": "shift+space",
-        "command": "editor.action.triggerSuggest",
-        "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly"
-    },
-    {"key": "ctrl+e","command": "revealFileInOS"},
-    {"key": "ctrl+shift+e","command": "workbench.files.action.showActiveFileInExplorer"},
-    
-
-    // Extension
-    // {
-    //     "key": "ctrl+shift+v",
-    //     "command": "extension.pasteImage",
-    //     "when": "editorTextFocus"
-    // },
-
-
-    // markdown
-    {
-        "key": "shift+6",
-        "command": "editor.action.insertSnippet",
-        "when": "editorTextFocus && editorLangId == 'markdown'",
-        "args": {"snippet": "^{$0\\}"}},
-    {
-        "key": "shift+-",
-        "command": "editor.action.insertSnippet",
-        "when": "editorTextFocus && editorLangId == 'markdown'",
-        "args": {"snippet": "\\_{$0\\}"}},
-
     // latex
     {
         "key": "shift+6",
@@ -63,23 +33,6 @@
             "snippet": "{\\frac{ $TM_SELECTED_TEXT$0 }{ 2 }}"
                         // "snippet": "{\\frac{ $0 }{ 2 }}"
         }
-    },
-    {
-        "key": "insert",
-        "command": "latex-workshop.synctex",
-        "when": "editorTextFocus && !config.latex-workshop.bind.altKeymap.enabled && !virtualWorkspace && editorLangId =~ /^latex$|^latex-expl3$|^doctex$/"
-    },
-    {
-        "key": "ctrl+alt+j",
-        "command": "-latex-workshop.synctex",
-        "when": "editorTextFocus && !config.latex-workshop.bind.altKeymap.enabled && !virtualWorkspace && editorLangId =~ /^latex$|^latex-expl3$|^doctex$/"
-    },
-    {
-        "key": "ctrl+j",
-        "command": "-workbench.action.togglePanel"
-    },
-
-
-
+    }
 
 ]
