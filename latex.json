@@ -1,0 +1,195 @@
+{
+	// Place your snippets for latex here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+	"cases": {
+		"prefix": "cases",
+		"body": [
+			"\\begin{cases}",
+			"□ & , \\text{if } ■",
+			"\\\\\\ ◇ & , \\text{if } ◆",
+			"\\end{cases}",
+			]
+		},
+		
+		
+		"ode": {
+			"prefix": "ode",
+			"body": [
+				"$$",
+				"\\begin{align*}",
+				"\\dot{x} =& y",
+				"\\\\\\ \\dot{y} =& x",
+				"\\end{align*}",
+				"$$",
+				]
+			},
+		
+		"SIR": {
+			"prefix": "sir",
+			"body": [
+				"$$",
+				"\\begin{align*}",
+				"{{d S} \\over {d t}} =& ",
+				"\\\\\\ {{d I} \\over {d t}} =& ",
+				"\\\\\\ {{d R} \\over {d t}} =& ",
+				"\\end{align*}",
+				"$$",
+				]
+			},
+		
+		"test": {
+			"prefix": "test",
+			"body": [
+				"$$",
+				"\\begin{align*}",
+				"H\\_{0} :& \\theta \\in \\Theta",
+				"\\\\\\ H\\_{1} :& \\theta \\notin \\Theta",
+				"\\end{align*}",
+				"$$",
+				]
+			},
+		
+		
+		
+		"()": {"prefix": "dd", "body": "\\left( $TM_SELECTED_TEXT \\right)",},
+		"[]": {"prefix": "aa", "body": "\\left[ $TM_SELECTED_TEXT \\right]",},
+		"{}": {"prefix": "ss", "body": "\\left\\{ $TM_SELECTED_TEXT \\right\\}",},
+		 "(": {"prefix":  "(", "body":  ["\\left( $0 \\right"]},
+		"$(": {"prefix": "$(", "body": ["$\\left( $0 \\right"]},
+		 "[": {"prefix":  "[", "body":  ["\\left[ $0 \\right"]},
+		"$[": {"prefix": "$[", "body": ["$\\left[ $0 \\right"]},
+		
+		  "/": {"prefix":   "/", "body":  ["{\\frac{ ${2:1} }{ ${1:2} }}$0"]},
+		 "$/": {"prefix":  "$/", "body": ["${\\frac{ ${2:1} }{ ${1:2} }}$0"]},
+		 "/p": {"prefix":  "/p", "body":  ["{\\frac{ \\partial ${2:f} }{ \\partial ${1:t} }}$0"]},
+		"$/p": {"prefix": "$/p", "body": ["${\\frac{ \\partial ${2:f} }{ \\partial ${1:t} }}$0"]},
+		 "/d": {"prefix":  "/d", "body":  ["{\\frac{ d ${2:f} }{ d ${1:t} }}$0"]},
+		"$/d": {"prefix": "$/d", "body": ["${\\frac{ d ${2:f} }{ d ${1:t} }}$0"]},
+		"overset->": {"prefix": "/-->", "body": ["\\overset{$0}{\\longrightarrow}"]},
+		
+		 "inprod": {"prefix":  "inprod", "body": [ "\\left< ${TM_SELECTED_TEXT:$0} \\right>"]},
+		"$inprod": {"prefix": "$inprod", "body": ["$\\left< ${TM_SELECTED_TEXT:$0} \\right>"]},
+		 "set___": {"prefix":  "set", "body": [ "\\left\\\\{ ${TM_SELECTED_TEXT:$0} \\right\\\\}"]},
+		"$set___": {"prefix": "$set", "body": ["$\\left\\\\{ ${TM_SELECTED_TEXT:$0} \\right\\\\}"]},
+		 "abs___": {"prefix":  "abs", "body": [ "\\left| ${TM_SELECTED_TEXT:$0} \\right|"]},
+		"$abs___": {"prefix": "$abs", "body": ["$\\left| ${TM_SELECTED_TEXT:$0} \\right|"]},
+		 "norm__": {"prefix":  "norm", "body": [ "\\left\\\\| ${TM_SELECTED_TEXT:$0} \\right\\\\|"]},
+		"$norm__": {"prefix": "$norm", "body": ["$\\left\\\\| ${TM_SELECTED_TEXT:$0} \\right\\\\|"]},
+		 "sqrt__": {"prefix":  "sqrt", "body": [ "\\sqrt\\\\\\\\{ ${TM_SELECTED_TEXT:$0} \\\\\\\\}"]},
+		"$sqrt__": {"prefix": "$sqrt", "body": ["$\\sqrt\\\\\\\\{ ${TM_SELECTED_TEXT:$0} \\\\\\\\}"]},
+		
+		 "be": {"prefix":  "be", "body": [ "\\begin{$1}$0\\end{$1}"]},
+		"$be": {"prefix": "$be", "body": ["$\\begin{$1}$0\\end{$1}"]},
+		
+		 "\\sum": {"prefix": "\\sum", "body": ["\\sum\\_{k=1}^{n}"]}, "$\\sum": {"prefix": "$\\sum", "body": ["$\\sum\\_{k=1}^{n}"]},
+		"\\prod": {"prefix": "\\prod", "body": ["\\prod\\_{k=1}^{n}"]}, "$\\prod": {"prefix": "$\\prod", "body": ["$\\prod\\_{k=1}^{n}"]},
+		
+		"bar": {"prefix": "bar",   "body": ["\\overline{$0}"]}, "$bar": {"prefix": "$bar",   "body": ["$\\overline{$0}"]},
+		"til": {"prefix": "til",   "body": ["\\widetilde{$0}"]}, "$til": {"prefix": "$til",   "body": ["$\\widetilde{$0}"]},
+		"hat": {"prefix": "hat",   "body": ["\\widehat{$0}"]}, "$hat": {"prefix": "$hat",   "body": ["$\\widehat{$0}"]},
+		
+		"mathbb__": {"prefix": "bb",   "body": ["\\mathbb{$0}"]}, "$mathbb__": {"prefix": "$bb",   "body": ["$\\mathbb{$0}"]},
+		"mathbf__": {"prefix": "bf",   "body": ["\\mathbf{$0}"]}, "$mathbf__": {"prefix": "$bf",   "body": ["$\\mathbf{$0}"]},
+		"mathsf__": {"prefix": "sf",   "body": ["\\mathsf{$0}"]}, "$mathsf__": {"prefix": "$sf",   "body": ["$\\mathsf{$0}"]},
+		"mathcal_": {"prefix": "cal", "body": ["\\mathcal{$0}"]}, "$mathcal_": {"prefix": "$cal", "body": ["$\\mathcal{$0}"]},
+		"mathscr_": {"prefix": "scr", "body": ["\\mathscr{$0}"]}, "$mathscr_": {"prefix": "$scr", "body": ["$\\mathscr{$0}"]},
+		
+		"natural_": {"prefix": "N", "body": ["\\mathbb{N}"]}, "$natural_": {"prefix": "$N", "body": ["$\\mathbb{N}"]},
+		"integer_": {"prefix": "Z", "body": ["\\mathbb{Z}"]}, "$integer_": {"prefix": "$Z", "body": ["$\\mathbb{Z}"]},
+		"rational": {"prefix": "Q", "body": ["\\mathbb{Q}"]}, "$rational": {"prefix": "$Q", "body": ["$\\mathbb{Q}"]},
+		"real____": {"prefix": "R", "body": ["\\mathbb{R}"]}, "$real____": {"prefix": "$R", "body": ["$\\mathbb{R}"]},
+		"complex_": {"prefix": "C", "body": ["\\mathbb{C}"]}, "$complex_": {"prefix": "$C", "body": ["$\\mathbb{C}"]},
+		
+		"00_": {"prefix": "\\0", "body": ["\\mathbf{0}"]},
+		"11_": {"prefix": "\\1", "body": ["\\mathbf{1}"]},
+		
+		"ee_": {"prefix": "ee", "body": ["\\mathbf{e}"]}, "$ee_": {"prefix": "$ee", "body": ["$\\mathbf{e}"]},
+		"hh_": {"prefix": "hh", "body": ["\\mathbf{h}"]}, "$hh_": {"prefix": "$hh", "body": ["$\\mathbf{h}"]},
+		"tt_": {"prefix": "tt", "body": ["\\mathbf{t}"]}, "$tt_": {"prefix": "$tt", "body": ["$\\mathbf{t}"]},
+		// "ss_": {"prefix": "ss", "body": ["\\mathbf{t}"]}, "$ss_": {"prefix": "$ss", "body": ["$\\mathbf{t}"]},
+		"uu_": {"prefix": "uu", "body": ["\\mathbf{u}"]}, "$uu_": {"prefix": "$uu", "body": ["$\\mathbf{u}"]},
+		"vv_": {"prefix": "vv", "body": ["\\mathbf{v}"]}, "$vv_": {"prefix": "$vv", "body": ["$\\mathbf{v}"]},
+		"ww_": {"prefix": "ww", "body": ["\\mathbf{w}"]}, "$ww_": {"prefix": "$ww", "body": ["$\\mathbf{w}"]},
+		"xx_": {"prefix": "xx", "body": ["\\mathbf{x}"]}, "$xx_": {"prefix": "$xx", "body": ["$\\mathbf{x}"]},
+		"yy_": {"prefix": "yy", "body": ["\\mathbf{y}"]}, "$yy_": {"prefix": "$yy", "body": ["$\\mathbf{y}"]},
+		"zz_": {"prefix": "zz", "body": ["\\mathbf{z}"]}, "$zz_": {"prefix": "$zz", "body": ["$\\mathbf{z}"]},
+		
+		"xax_": {"prefix": "xax", "body": ["\\mathbf{x}^{\\ast} A \\mathbf{x}"]}, "$xax_": {"prefix": "$xax", "body": ["$\\mathbf{x}^{\\ast} A \\mathbf{x}"]},
+		
+		"Var": {"prefix": "Var", "body": ["\\text{Var}"]}, "$Var": {"prefix": "$Var", "body": ["$\\text{Var}"]},
+		"Cov": {"prefix": "Cov", "body": ["\\text{Cov}"]}, "$Cov": {"prefix": "$Cov", "body": ["$\\text{Cov}"]},
+		"Im": {"prefix": "Im", "body": ["\\text{Im}"]}, "$Im": {"prefix": "$Im", "body": ["$\\text{Im}"]},
+		"s.e.": {"prefix": "se", "body": ["\\text{s.e.}"]}, "$s.e.": {"prefix": "$se", "body": ["$\\text{s.e.}"]},
+		
+		"R0": {"prefix": "R0", "body": ["\\mathcal{R}\\_{0}"]},
+		
+		"Dto": {"prefix": "Dto", "body": ["\\overset{D}{\\to}"]},
+		"Pto": {"prefix": "Pto", "body": ["\\overset{P}{\\to}"]},
+		"Wto": {"prefix": "Wto", "body": ["\\overset{W}{\\to}"]},
+		"bto": {"prefix": "bto", "body": ["\\overset{\\partial\\_{$1}}{\\longrightarrow}"]},
+		
+		"iid": {"prefix": "iid", "body": ["\\overset{\\text{iid}}{\\sim}"]},
+		
+		"oprob": {
+			"prefix": "oprob",
+			"body": [
+				"$$",
+				"\\begin{matrix}",
+				"    \\text{Optimize}   & f(x)",
+				"\\\\\\ \\text{subject to} & 0 < x",
+				"\\end{matrix}",
+				"$$"]},
+		
+		"linearproblem": {"prefix": "linearproblem", "body": [
+			"\\begin{matrix}",
+			"    \\text{Optimize}   & r",
+			"\\\\\\ \\text{subject to} & a &\\le& A",
+			"\\\\\\                   & b &\\le& B",
+			"\\end{matrix}"]},
+		
+		"matrix2": {"prefix": "matrix2", "body": [
+			"\\begin{bmatrix}",
+			"    1 & 0",
+			"\\\\\\ 0 & 1",
+			"\\end{bmatrix}"]},
+		"matrix3": {"prefix": "matrix3", "body": [
+			"\\begin{bmatrix}",
+			"    1 & 0 & 0",
+			"\\\\\\ 0 & 1 & 0",
+			"\\\\\\ 0 & 0 & 1",
+			"\\end{bmatrix}"]},
+		"matrixn": {"prefix": "matrixn", "body": [
+			"\\begin{bmatrix}",
+			"    1 & 0 & \\cdots & 0",
+			"\\\\\\ 0 & 1 & \\cdots & 0",
+			"\\\\\\ \\vdots & \\vdots & \\ddots & \\vdots",
+			"\\\\\\ 0 & 0 & \\cdots & 1",
+			"\\end{bmatrix}"]},
+		
+		"matrixN": {"prefix": "matrixN", "body": [
+			"\\begin{bmatrix}",
+			"    1 & 0 & 0 & \\cdots & 0",
+			"\\\\\\ 0 & 1 & 0 & \\cdots & 0",
+			"\\\\\\ 0 & 0 & 1 & \\cdots & 0",
+			"\\\\\\ \\vdots & \\vdots & \\vdots & \\ddots & \\vdots",
+			"\\\\\\ 0 & 0 & 0 & \\cdots & 1",
+			"\\end{bmatrix}"]},
+		
+		"vector": {"prefix": "vector", "body": [
+			"\\begin{bmatrix} $1\\_{1} \\\\\\ \\vdots \\\\\\ $1\\_{n} \\end{bmatrix}$0"]},
+		
+		
+		"od": {"prefix": "od", "body": ["{{ d } \\over { d t }}"]}, "$od": {"prefix": "$od", "body": ["${{ d } \\over { d t }}"]}, 
+		"pd": {"prefix": "pd", "body": ["{{ \\partial } \\over { \\partial t }}"]}, "$pd": {"prefix": "$pd", "body": ["${{ \\partial } \\over { \\partial t }}"]}, 
+		"cdots": {"prefix": "cdots", "body": ["$1\\_{1} , \\cdots , $1\\_{n}$0"]}, "$cdots": {"prefix": "$cdots", "body": ["$$1\\_{1} , \\cdots , $1\\_{n}$0"]}, 
+		
+		"normal": {"prefix": "normal", "body": ["N \\left( \\mu , \\sigma^{2} \\right)$"]}, "$normal": {"prefix": "$normal", "body": ["\\$N \\left( \\mu , \\sigma^{2} \\right)"]},
+		"chisq": {"prefix": "chisq", "body": ["\\chi\\_{$0}^{2}"]}, "$chisq": {"prefix": "$chisq", "body": ["$\\chi\\_{$0}^{2}$"]}, 
+		
+		"pi1": {"prefix": "\\pi1", "body": ["\\pi\\_{1} \\left( X, x\\_{0} \\right)"]}, "$pi1": {"prefix": "$\\pi1", "body": ["$\\pi\\_{1} \\left( X, x\\_{0} \\right)$"]}, 
+		
+		"oper": {"prefix": "\\oper", "body": ["\\operatorname{$0}"]}, "$oper": {"prefix": "$\\oper", "body": ["$\\operatorname{$0}$"]}, 
+}

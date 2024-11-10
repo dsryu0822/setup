@@ -1,0 +1,74 @@
+{
+    "search.exclude": {
+        "**/*.csv": true,
+        "**/*.gif": true,
+        "**/*.jpeg": true,
+        "**/*.jpg": true,
+        "**/*.JPG": true,
+        "**/*.png": true,
+        "**/*.PNG": true,
+        "**/*.svg": true,
+        // "**/*.en.md": true,
+        // "**/*.jp.md": true,
+        "*.jl": true,
+    },
+    "terminal.external.windowsExec": "%LocalAppData%\\Microsoft\\WindowsApps\\wt.exe",
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.editor.wrapTabs": true,
+    "workbench.panel.defaultLocation": "right",
+    "workbench.colorTheme": "Codesong",
+
+    "git.autofetch": true,
+
+    "explorer.autoReveal": false,
+    "editor.tabCompletion": "on",
+    "editor.snippetSuggestions": "top",
+    "editor.inlineSuggest.enabled": true,
+    "editor.stickyScroll.enabled": true,
+    "editor.accessibilitySupport": "off",
+    "editor.unicodeHighlight.allowedCharacters": {
+        "️": true,
+        "σ": true,
+        "α": true,
+        "∪": true,
+        "⋃": true,
+        "ρ": true,
+        "ℱ": true,
+        "γ": true,
+        "′": true,
+        "ℯ": true,
+        "＆": true
+    },
+
+
+    "julia.symbolCacheDownload": true,
+    "julia.execution.codeInREPL": true,
+    "julia.execution.inlineResultsForCellEvaluation": true,
+    "julia.execution.resultType": "REPL",
+    "julia.lint.call": false,
+    "julia.executablePath": "C:\\Users\\rmsms\\AppData\\Local\\Programs\\Julia-1.10.3\\bin\\julia.exe",
+    "julia.enableTelemetry": false,
+
+    "[markdown]": {"editor.wordBasedSuggestions": "off",},
+    "[latex]": {"editor.wordWrap": "on",},
+    
+    "latex-workshop.view.pdf.internal.synctex.keybinding": "double-click",
+    // "latex-workshop.synctex.synctexjs.enabled": true,
+    "latex-workshop.synctex.afterBuild.enabled": true,
+    "latex-workshop.view.pdf.viewer": "tab",
+    
+    "terminal.integrated.commandsToSkipShell": [
+        "github.copilot.terminal.suggestCommand",
+        "language-julia.interrupt"
+    ],
+
+    "inlineChat.holdToSpeech": false,
+    "inlineChat.mode": "preview",
+    "inlineChat.finishOnType": true,
+    "inlineChat.accessibleDiffView": "on",
+    "github.copilot.editor.enableAutoCompletions": true,
+    "chat.editor.wordWrap": "on",
+    "latex-workshop.message.badbox.show": "none",
+    "julia.enableCrashReporter": true,
+
+}
