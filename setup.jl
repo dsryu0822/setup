@@ -2,7 +2,8 @@ using Pkg
 
 lib_list = [
  # core
- "Plots", "Colors", "ColorSchemes", "DataFrames", "CSV", "LaTeXStrings", "ProgressMeter", "JLD2", "OpenAI",
+ "Plots", "Colors", "ColorSchemes", "DataFrames", "CSV", "LaTeXStrings", "ProgressMeter", "StatsBase",
+ "JLD2", "OpenAI",
  
  # data-driven model
  "Combinatorics", "Symbolics", "DecisionTree",  "PrettyTables"
