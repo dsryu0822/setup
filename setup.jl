@@ -1,20 +1,30 @@
 using Pkg
 
 lib_list = [
- "DataFrames", "Graphs", "CSV", "LaTeXStrings",
- "ProgressMeter", "JLD2", "OpenAI",
- "Flux", "CUDA", "Zygote", "DecisionTree", "Clustering",
- "Distributions", "StatsBase", "GLM", "Combinatorics", "Symbolics",
- "Pluto", "PrettyTables",
+ # core
+ "Plots", "Colors", "ColorSchemes", "DataFrames", "CSV", "LaTeXStrings", "ProgressMeter", "JLD2", "OpenAI",
+ 
+ # data-driven model
+ "Combinatorics", "Symbolics", "DecisionTree",  "PrettyTables"
+ 
+ # AI
+ # "Flux", "CUDA", "Zygote", "Clustering",
+ 
+ # "Graphs", "Distributions", "StatsBase", "GLM",  
  # "JSON", "XLSX",
- # "Crayons", "SMTPClient",
+ # "Pluto", "Crayons", "SMTPClient",
  # "Distances", "NearestNeighbors", "BoundingSphere", 
- "Plots", "Colors", "ColorSchemes" # Too much essential
 ]
 
 @time Pkg.add(lib_list)
 @time Pkg.precompile(timing=true)
- 
-using Pluto, CUDA
-Pluto.run()
-println("CUDA.functional(): ", CUDA.functional())
+
+if :Pluto in lib_list
+  using Pluto
+  Pluto.run()
+end
+
+if :Cuda in lib_list
+  using CUDA
+  println("CUDA.functional(): ", CUDA.functional())
+end
