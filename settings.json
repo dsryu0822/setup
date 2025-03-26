@@ -13,7 +13,6 @@
         "*.jl": true,
     },
     "terminal.external.windowsExec": "%LocalAppData%\\Microsoft\\WindowsApps\\wt.exe",
-    "workbench.iconTheme": "material-icon-theme",
     "workbench.editor.wrapTabs": true,
     "workbench.panel.defaultLocation": "right",
     "workbench.colorTheme": "Codesong",
@@ -21,7 +20,6 @@
     "git.autofetch": true,
 
     "explorer.autoReveal": false,
-    "editor.tabCompletion": "on",
     "editor.snippetSuggestions": "top",
     "editor.inlineSuggest.enabled": true,
     "editor.stickyScroll.enabled": true,
@@ -46,10 +44,12 @@
     "julia.execution.inlineResultsForCellEvaluation": true,
     "julia.execution.resultType": "REPL",
     "julia.lint.call": false,
-    "julia.executablePath": "C:\\Users\\rmsms\\AppData\\Local\\Programs\\Julia-1.10.3\\bin\\julia.exe",
     "julia.enableTelemetry": false,
 
-    "[markdown]": {"editor.wordBasedSuggestions": "off",},
+    "[markdown]": {
+        "editor.wordBasedSuggestions": "off",
+        "editor.defaultFormatter": "yzhang.markdown-all-in-one",
+    },
     "[latex]": {"editor.wordWrap": "on",},
     
     "latex-workshop.view.pdf.internal.synctex.keybinding": "double-click",
@@ -59,16 +59,23 @@
     
     "terminal.integrated.commandsToSkipShell": [
         "github.copilot.terminal.suggestCommand",
-        "language-julia.interrupt"
+        "language-julia.interrupt",
+        "matlab.interrupt"
     ],
 
     "inlineChat.holdToSpeech": false,
     "inlineChat.mode": "preview",
     "inlineChat.finishOnType": true,
     "inlineChat.accessibleDiffView": "on",
-    "github.copilot.editor.enableAutoCompletions": true,
+    "julia.NumThreads": 10,
     "chat.editor.wordWrap": "on",
     "latex-workshop.message.badbox.show": "none",
     "julia.enableCrashReporter": true,
+    "github.copilot.chat.fixTestFailure.enabled": false,
+    "github.copilot.enable": {
+        "markdown": true
+    },
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.tabCompletion": "on",
 
 }

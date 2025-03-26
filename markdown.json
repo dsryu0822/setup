@@ -1,0 +1,1606 @@
+{	
+
+// 연구단계
+"qwer": {"prefix": "qwer", "body": "${1|one,two,three|}",},  
+"hrd": {"prefix": "hr1",
+"body": [ "<hr align=\"center\" style=\"width: 80%;\">" ],},	
+"hr1": {"prefix": "hr2",
+"body": [ "<hr align=\"center\" style=\"width: 50%;\">" ],},
+
+
+    " sup": {"prefix": [" sup", " 녀ㅔ"], "body": ["<sup>$0</sup>"],},
+    "doi": {"prefix": ["doi", "애ㅑ"], "body": ["https://doi.org/"],},
+
+    "QED": {"prefix": ["QED"], "body": [ "{{<qed>}}" ],},
+    
+    "julia_1.11.1": {"prefix": ["julia"], "body": [
+        "## 환경",
+        "",
+        " - OS: Windows",
+        " - julia: v1.11.1" ],},
+    
+	"MATLAB_2023b": {"prefix": ["MATLAB"], "body": [
+		"## 환경",
+		"",
+		" - OS: Windows",
+		" - MATLAB: 2023b" ],},
+	
+    "png": {"prefix": ["png"], "body": [ "![$CLIPBOARD.png]($CLIPBOARD.png#center)" ],},
+    "gif": {"prefix": ["gif"], "body": [ "![$CLIPBOARD.gif]($CLIPBOARD.gif#center)" ],},
+    "svg": {"prefix": ["svg"], "body": [ "![$CLIPBOARD.svg]($CLIPBOARD.svg#center)" ],},
+    "jpg": {"prefix": ["jpg"], "body": [ "![$CLIPBOARD.jpg]($CLIPBOARD.jpg#center)" ],},
+    
+    "data": {"prefix": ["data"], "body": [
+        "## 소개", "", "![](#center)", "", "설명", "", "## 요구사항", "", "어떤 요구 사항도 없이 무제한적으로 다운로드 받을 수 있다.", "", "## 데이터 예시", "", " - example.csv", "", "## 가이드", "", "## 카테고리", "", "## 링크", "", " - 파일셋 다운로드: ", " - Open-API: "
+    ]},
+    
+    "REF": {"prefix": "REF", "body": ["[^$1]","","[^$1]: $0"]},
+    "ㄱㄷㄹ": {"prefix": "ㄱㄷㄹ", "body": ["[^$0]","","[^$0]: "]},
+
+    "intro": {"prefix": "intro", "body": ["공간 \\$X\\$ 와 함수 \\$f : X \\to X\\$ 에 대해 다음과 같은 [벡터필드](../970)가 [미분 방정식](../../categories/상미분방정식)으로 주어져 있다고 하자.",
+"\\$\\$",
+"\\dot{x} = f(x)",
+"\\$\\$"]},
+    
+    "`iff": {
+        "prefix": "`iff",
+        "body": [
+            "\\$(\\implies)\\$",
+            "",
+            "\\$(\\impliedby)\\$",
+            "",
+			"{{<qed>}}"
+            ]
+        },
+	
+	"pcode": {
+		"prefix": "pcode",
+		"body": [
+			"<div class=\"pseudocode-table\">",
+			"",
+			"|알고리즘: 알고리즘 이름|||",
+			"|-|-|-|",
+			"| In | 파라메터 설명1 <br> 파라메터 설명2 ||",
+			"| 1. | 프로시저 설명1 ||",
+			"| 2. | 프로시저 설명2 | # 주석1 |",
+			"| 3. | **for \\$k = 1, \\cdots, n\\$ do**  ||",
+			"| 4. | {{<t>}} \\$x\\_{t+1} \\leftarrow x\\_{t}\\$ | # 주석2 |",
+			"| 10. | **end for** ||",
+			"| Out | 리턴 ||",
+			"</div>"
+			]
+		},
+
+
+// link
+
+
+// tex
+
+
+
+"estimator": {"prefix": "estimator", "body": ["\\hat{\\theta}"]},
+
+"eqn": {
+	"prefix": ["eqn", "ㄷ부"],
+	"body": [
+		"\\begin{align*}",
+		"$0 =& ▶",
+		"\\\\\\\\\\ =& ■",
+		"\\\\\\\\\\ =& ■",
+		"\\end{align*}"
+	]
+	},
+
+"align": {
+"prefix": "align",
+"body": [
+	"\\begin{align*}",
+	"    □ =& ■",
+	"\\\\\\\\\\ □ =& ■",
+	"\\\\\\\\\\ □ =& ■",
+	"\\end{align*}",
+	]
+},
+
+"cases": {
+"prefix": "cases",
+"body": [
+	"\\begin{cases}",
+	"□ & , \\text{if } ■",
+	"\\\\\\\\\\ ◇ & , \\text{if } ◆",
+	"\\end{cases}",
+	]
+},
+
+
+"ode": {
+	"prefix": "ode",
+	"body": [
+		"$$",
+		"\\begin{align*}",
+		"\\dot{x} =& y",
+		"\\\\\\\\\\ \\dot{y} =& x",
+		"\\end{align*}",
+		"$$",
+		]
+	},
+
+"SIR": {
+	"prefix": "sir",
+	"body": [
+		"$$",
+		"\\begin{align*}",
+		"{{d S} \\over {d t}} =& ",
+		"\\\\\\\\\\ {{d I} \\over {d t}} =& ",
+		"\\\\\\\\\\ {{d R} \\over {d t}} =& ",
+		"\\end{align*}",
+		"$$",
+		]
+	},
+
+"test": {
+	"prefix": "test",
+	"body": [
+		"$$",
+		"\\begin{align*}",
+		"H\\_{0} :& \\theta \\in \\Theta",
+		"\\\\\\\\\\ H\\_{1} :& \\theta \\notin \\Theta",
+		"\\end{align*}",
+		"$$",
+		]
+	},
+
+
+"()": {"prefix": "dd", "body": "\\left( $TM_SELECTED_TEXT \\right)",},
+"[]": {"prefix": "aa", "body": "\\left[ $TM_SELECTED_TEXT \\right]",},
+"{}": {"prefix": "ss", "body": "\\left\\{ $TM_SELECTED_TEXT \\right\\}",},
+ "(": {"prefix":  "(", "body":  ["\\left( $0 \\right"]},
+"$(": {"prefix": "$(", "body": ["$\\left( $0 \\right"]},
+ "[": {"prefix":  "[", "body":  ["\\left[ $0 \\right"]},
+"$[": {"prefix": "$[", "body": ["$\\left[ $0 \\right"]},
+
+  "/": {"prefix":   "/", "body":  ["{\\frac{ ${2:1} }{ ${1:2} }}$0"]},
+ "$/": {"prefix":  "$/", "body": ["${\\frac{ ${2:1} }{ ${1:2} }}$0"]},
+ "/p": {"prefix":  "/p", "body":  ["{\\frac{ \\partial ${2:f} }{ \\partial ${1:t} }}$0"]},
+"$/p": {"prefix": "$/p", "body": ["${\\frac{ \\partial ${2:f} }{ \\partial ${1:t} }}$0"]},
+ "/d": {"prefix":  "/d", "body":  ["{\\frac{ d ${2:f} }{ d ${1:t} }}$0"]},
+"$/d": {"prefix": "$/d", "body": ["${\\frac{ d ${2:f} }{ d ${1:t} }}$0"]},
+"overset->": {"prefix": "/-->", "body": ["\\overset{$0}{\\longrightarrow}"]},
+
+ "inprod": {"prefix":  "inprod", "body": [ "\\left< ${TM_SELECTED_TEXT:$0} \\right>"]},
+"$inprod": {"prefix": "$inprod", "body": ["$\\left< ${TM_SELECTED_TEXT:$0} \\right>"]},
+ "set___": {"prefix":  "set", "body": [ "\\left\\\\\\\\{ ${TM_SELECTED_TEXT:$0} \\right\\\\\\\\}"]},
+"$set___": {"prefix": "$set", "body": ["$\\left\\\\\\\\{ ${TM_SELECTED_TEXT:$0} \\right\\\\\\\\}"]},
+ "abs___": {"prefix":  "abs", "body": [ "\\left| ${TM_SELECTED_TEXT:$0} \\right|"]},
+"$abs___": {"prefix": "$abs", "body": ["$\\left| ${TM_SELECTED_TEXT:$0} \\right|"]},
+ "norm__": {"prefix":  "norm", "body": [ "\\left\\\\\\| ${TM_SELECTED_TEXT:$0} \\right\\\\\\\\|"]},
+"$norm__": {"prefix": "$norm", "body": ["$\\left\\\\\\| ${TM_SELECTED_TEXT:$0} \\right\\\\\\\\|"]},
+ "sqrt__": {"prefix":  "sqrt", "body": [ "\\sqrt\\\\\\\\{ ${TM_SELECTED_TEXT:$0} \\\\\\\\}"]},
+"$sqrt__": {"prefix": "$sqrt", "body": ["$\\sqrt\\\\\\\\{ ${TM_SELECTED_TEXT:$0} \\\\\\\\}"]},
+
+ "be": {"prefix":  "be", "body": [ "\\begin{$1}$0\\end{$1}"]},
+"$be": {"prefix": "$be", "body": ["$\\begin{$1}$0\\end{$1}"]},
+
+ "\\sum": {"prefix": "\\sum", "body": ["\\sum\\_{k=1}^{n}"]}, "$\\sum": {"prefix": "$\\sum", "body": ["$\\sum\\_{k=1}^{n}"]},
+"\\prod": {"prefix": "\\prod", "body": ["\\prod\\_{k=1}^{n}"]}, "$\\prod": {"prefix": "$\\prod", "body": ["$\\prod\\_{k=1}^{n}"]},
+
+"bar": {"prefix": "bar",   "body": ["\\overline{$0}"]}, "$bar": {"prefix": "$bar",   "body": ["$\\overline{$0}"]},
+"til": {"prefix": "til",   "body": ["\\widetilde{$0}"]}, "$til": {"prefix": "$til",   "body": ["$\\widetilde{$0}"]},
+"hat": {"prefix": "hat",   "body": ["\\widehat{$0}"]}, "$hat": {"prefix": "$hat",   "body": ["$\\widehat{$0}"]},
+
+"mathbb__": {"prefix": "bb",   "body": ["\\mathbb{$0}"]}, "$mathbb__": {"prefix": "$bb",   "body": ["$\\mathbb{$0}"]},
+"mathbf__": {"prefix": "bf",   "body": ["\\mathbf{$0}"]}, "$mathbf__": {"prefix": "$bf",   "body": ["$\\mathbf{$0}"]},
+"mathsf__": {"prefix": "sf",   "body": ["\\mathsf{$0}"]}, "$mathsf__": {"prefix": "$sf",   "body": ["$\\mathsf{$0}"]},
+"mathcal_": {"prefix": "cal", "body": ["\\mathcal{$0}"]}, "$mathcal_": {"prefix": "$cal", "body": ["$\\mathcal{$0}"]},
+"mathscr_": {"prefix": "scr", "body": ["\\mathscr{$0}"]}, "$mathscr_": {"prefix": "$scr", "body": ["$\\mathscr{$0}"]},
+
+"natural_": {"prefix": "N", "body": ["\\mathbb{N}"]}, "$natural_": {"prefix": "$N", "body": ["$\\mathbb{N}"]},
+"integer_": {"prefix": "Z", "body": ["\\mathbb{Z}"]}, "$integer_": {"prefix": "$Z", "body": ["$\\mathbb{Z}"]},
+"rational": {"prefix": "Q", "body": ["\\mathbb{Q}"]}, "$rational": {"prefix": "$Q", "body": ["$\\mathbb{Q}"]},
+"real____": {"prefix": "R", "body": ["\\mathbb{R}"]}, "$real____": {"prefix": "$R", "body": ["$\\mathbb{R}"]},
+"complex_": {"prefix": "C", "body": ["\\mathbb{C}"]}, "$complex_": {"prefix": "$C", "body": ["$\\mathbb{C}"]},
+
+"00_": {"prefix": "\\0", "body": ["\\mathbf{0}"]},
+"11_": {"prefix": "\\1", "body": ["\\mathbf{1}"]},
+
+"ee_": {"prefix": "ee", "body": ["\\mathbf{e}"]}, "$ee_": {"prefix": "$ee", "body": ["$\\mathbf{e}"]},
+"hh_": {"prefix": "hh", "body": ["\\mathbf{h}"]}, "$hh_": {"prefix": "$hh", "body": ["$\\mathbf{h}"]},
+"tt_": {"prefix": "tt", "body": ["\\mathbf{t}"]}, "$tt_": {"prefix": "$tt", "body": ["$\\mathbf{t}"]},
+// "ss_": {"prefix": "ss", "body": ["\\mathbf{t}"]}, "$ss_": {"prefix": "$ss", "body": ["$\\mathbf{t}"]},
+"uu_": {"prefix": "uu", "body": ["\\mathbf{u}"]}, "$uu_": {"prefix": "$uu", "body": ["$\\mathbf{u}"]},
+"vv_": {"prefix": "vv", "body": ["\\mathbf{v}"]}, "$vv_": {"prefix": "$vv", "body": ["$\\mathbf{v}"]},
+"ww_": {"prefix": "ww", "body": ["\\mathbf{w}"]}, "$ww_": {"prefix": "$ww", "body": ["$\\mathbf{w}"]},
+"xx_": {"prefix": "xx", "body": ["\\mathbf{x}"]}, "$xx_": {"prefix": "$xx", "body": ["$\\mathbf{x}"]},
+"yy_": {"prefix": "yy", "body": ["\\mathbf{y}"]}, "$yy_": {"prefix": "$yy", "body": ["$\\mathbf{y}"]},
+"zz_": {"prefix": "zz", "body": ["\\mathbf{z}"]}, "$zz_": {"prefix": "$zz", "body": ["$\\mathbf{z}"]},
+
+"xax_": {"prefix": "xax", "body": ["\\mathbf{x}^{\\ast} A \\mathbf{x}"]}, "$xax_": {"prefix": "$xax", "body": ["$\\mathbf{x}^{\\ast} A \\mathbf{x}"]},
+
+"Var": {"prefix": "Var", "body": ["\\operatorname{Var}"]}, "$Var": {"prefix": "$Var", "body": ["$\\operatorname{Var}"]},
+"Cov": {"prefix": "Cov", "body": ["\\operatorname{Cov}"]}, "$Cov": {"prefix": "$Cov", "body": ["$\\operatorname{Cov}"]},
+"Im": {"prefix": "Im", "body": ["\\operatorname{Im}"]}, "$Im": {"prefix": "$Im", "body": ["$\\operatorname{Im}"]},
+"s.e.": {"prefix": "se", "body": ["\\text{s.e.}"]}, "$s.e.": {"prefix": "$se", "body": ["$\\text{s.e.}"]},
+
+"R0": {"prefix": "R0", "body": ["\\mathcal{R}\\_{0}"]},
+
+"Dto": {"prefix": "Dto", "body": ["\\overset{D}{\\to}"]},
+"Pto": {"prefix": "Pto", "body": ["\\overset{P}{\\to}"]},
+"Wto": {"prefix": "Wto", "body": ["\\overset{W}{\\to}"]},
+"bto": {"prefix": "bto", "body": ["\\overset{\\partial\\_{$1}}{\\longrightarrow}"]},
+
+"iid": {"prefix": "iid", "body": ["\\overset{\\text{iid}}{\\sim}"]},
+
+"oprob": {
+	"prefix": "oprob",
+	"body": [
+		"$$",
+		"\\begin{matrix}",
+		"    \\text{Optimize}   & f(x)",
+		"\\\\\\\\\\ \\text{subject to} & 0 < x",
+		"\\end{matrix}",
+		"$$"]},
+
+"linearproblem": {"prefix": "linearproblem", "body": [
+	"\\begin{matrix}",
+	"    \\text{Optimize}   & r",
+	"\\\\\\\\\\ \\text{subject to} & a &\\le& A",
+	"\\\\\\\\\\                   & b &\\le& B",
+	"\\end{matrix}"]},
+
+"matrix2": {"prefix": "matrix2", "body": [
+	"\\begin{bmatrix}",
+	"    1 & 0",
+	"\\\\\\\\\\ 0 & 1",
+	"\\end{bmatrix}"]},
+"matrix3": {"prefix": "matrix3", "body": [
+	"\\begin{bmatrix}",
+	"    1 & 0 & 0",
+	"\\\\\\\\\\ 0 & 1 & 0",
+	"\\\\\\\\\\ 0 & 0 & 1",
+	"\\end{bmatrix}"]},
+"matrixn": {"prefix": "matrixn", "body": [
+	"\\begin{bmatrix}",
+	"    1 & 0 & \\cdots & 0",
+	"\\\\\\\\\\ 0 & 1 & \\cdots & 0",
+	"\\\\\\\\\\ \\vdots & \\vdots & \\ddots & \\vdots",
+	"\\\\\\\\\\ 0 & 0 & \\cdots & 1",
+	"\\end{bmatrix}"]},
+
+"matrixN": {"prefix": "matrixN", "body": [
+	"\\begin{bmatrix}",
+	"    1 & 0 & 0 & \\cdots & 0",
+	"\\\\\\\\\\ 0 & 1 & 0 & \\cdots & 0",
+	"\\\\\\\\\\ 0 & 0 & 1 & \\cdots & 0",
+	"\\\\\\\\\\ \\vdots & \\vdots & \\vdots & \\ddots & \\vdots",
+	"\\\\\\\\\\ 0 & 0 & 0 & \\cdots & 1",
+	"\\end{bmatrix}"]},
+
+"vector": {"prefix": "vector", "body": [
+	"\\begin{bmatrix} $1\\_{1} \\\\\\\\\\ \\vdots \\\\\\\\\\ $1\\_{n} \\end{bmatrix}$0"]},
+
+
+"od": {"prefix": "od", "body": ["{{ d } \\over { d t }}"]}, "$od": {"prefix": "$od", "body": ["${{ d } \\over { d t }}"]}, 
+"pd": {"prefix": "pd", "body": ["{{ \\partial } \\over { \\partial t }}"]}, "$pd": {"prefix": "$pd", "body": ["${{ \\partial } \\over { \\partial t }}"]}, 
+"cdots": {"prefix": "cdots", "body": ["$1\\_{1} , \\cdots , $1\\_{n}$0"]}, "$cdots": {"prefix": "$cdots", "body": ["$$1\\_{1} , \\cdots , $1\\_{n}$0"]}, 
+
+"normal": {"prefix": "normal", "body": ["N \\left( \\mu , \\sigma^{2} \\right)$"]}, "$normal": {"prefix": "$normal", "body": ["\\$N \\left( \\mu , \\sigma^{2} \\right)"]},
+"chisq": {"prefix": "chisq", "body": ["\\chi\\_{$0}^{2}"]}, "$chisq": {"prefix": "$chisq", "body": ["$\\chi\\_{$0}^{2}$"]}, 
+
+"pi1": {"prefix": "\\pi1", "body": ["\\pi\\_{1} \\left( X, x\\_{0} \\right)"]}, "$pi1": {"prefix": "$\\pi1", "body": ["$\\pi\\_{1} \\left( X, x\\_{0} \\right)$"]}, 
+
+"oper": {"prefix": "\\oper", "body": ["\\operatorname{$0}"]}, "$oper": {"prefix": "$\\oper", "body": ["$\\operatorname{$0}$"]}, 
+"tr": {"prefix": "\\tr", "body": ["\\operatorname{tr}"]}, "$tr": {"prefix": "$\\tr", "body": ["$\\operatorname{tr}$"]}, 
+
+
+// reference
+
+"allen": { "prefix": "allen", "body": ["[^1]", "",
+    "[^1]: Allen. (2006). An Introduction to Mathematical Biology: p0."]},
+
+"atkinson": { "prefix": "atkinson", "body": ["[^1]", "",
+    "[^1]: Atkinson. (1989). An Introduction to Numerical Analysis(2nd Edition): p0."]},
+
+// "applebaum": { // 	"prefix": "applebaum",
+// 	"body": ["[^1]", "",
+//     "[^1]: Applebaum. (2008). Probability and Information(2nd Edition): p0."]},
+
+// "apostol": { "prefix": "apostol", "body": ["[^1]", "",
+// "[^1]: Apostol. (1976). Introduction to Analytic Number Theory: p0."]},
+
+"banerjee": { "prefix": "banerjee", "body": ["[^1]", "",
+"[^1]: Banerjee. (2015). Hierarchical Modeling and Analysis for Spatial Data(2nd Edition): p0."]},
+
+// "bartle": { "prefix": "bartle", "body": ["[^1]", "",
+// "[^1]: Bartle. (1995). The Elements of Integration and Lebesgue Measure: p0."]},
+
+// "brouwer": { "prefix": "brouwer", "body": ["[^1]", "",
+// "[^1]: Brouwer. (2011). Spectra of Graphs: p0."]},
+
+"brouwer": { "prefix": "brunton", "body": ["[^1]", "",
+"[^1]: Brunton. (2022). Data-Driven Science and Engineering : Machine Learning, Dynamical Systems, and Control(2nd Edition): p0."]},
+
+"Bjørnstad": { "prefix": "Bjørnstad", "body": ["[^1]", "",
+    "[^1]: Ottar N. Bjørnstad. (2018). Epidemics Models and Data using R: p0."]},
+
+"casella": { "prefix": "casella", "body": ["[^1]", "",
+"[^1]: Casella. (2001). Statistical Inference(2nd Edition): p0."]},
+    
+"capasso": { "prefix": "capasso", "body": ["[^1]", "",
+      "[^1]: Capasso. (1993). Mathematical Structures of Epidemic Systems: p0."]},
+
+//   "capinski": {//     "prefix": "capinski",
+//     "body": ["[^1]", "",
+//         "[^1]: Capinski. (1999). Measure, Integral and Probability: p0."]},
+
+"cryer": { "prefix": "cryer", "body": ["[^1]", "",
+"[^1]: Cryer. (2008). Time Series Analysis: With Applications in R(2nd Edition): p0."]},
+
+"croom": { "prefix": "croom", "body": ["[^1]", "",
+"[^1]: Croom. (1989). Principles of Topology: p0."]},
+    
+"dantchev": { "prefix": "dantchev", "body": ["[^1]", "",
+"[^1]: Dantchev. (2012). Efficient construction of the Cech complex: p0."]},
+
+"durrett": { "prefix": "durrett", "body": ["[^1]", "",
+"[^1]: Durrett. (2019). Probability: Theory and Examples(5th edition): p0."]},
+
+//     "folland": {//     "prefix": "folland",
+//     "body": ["[^1]", "",
+//         "[^1]: Folland. (1999). Real Analysis: Modern Techniques and Their Applications(2nd Edition): p0."]},
+
+"Edelsbrunner": { "prefix": "edelsbrunner", "body": ["[^1]", "",
+"[^1]: Edelsbrunner, Harer. (2010). Computational Topology An Introduction: p0."]},
+
+"fraleigh": {"prefix": "fraleigh", "body": ["[^1]", "",
+"[^1]: Fraleigh. (2003). A first course in abstract algebra(7th Edition): p0."]},
+
+"frieze": {    "prefix": "frieze",
+    "body": ["[^1]", "",
+    "[^1]: Frieze. (2015). Introduction to Random Graphs: p0."]},
+
+"guckenheimer": {"prefix": "guckenheimer", "body": ["[^1]", "",
+"[^1]: Guckenheimer. (1983). Nonlinear Oscillations, Dynamical Systems, and Bifurcations of Vector Fields: p0."]},
+
+"Kosniowski": {"prefix": "Kosniowski", "body": ["[^1]", "",
+"[^1]: Kosniowski. (1980). A First Course in Algebraic Topology: p0."]},
+
+"Kuznetsov": {"prefix": "Kuznetsov", "body": ["[^1]", "",
+"[^1]: Kuznetsov. (1998). Elements of Applied Bifurcation Theory: p0."]},
+
+"hadi": {"prefix": "hadi", "body": ["[^1]", "",
+"[^1]: Hadi. (2006). Regression Analysis by Example(4th Edition): p0."]},
+
+"hatcher": {"prefix": "hatcher", "body": ["[^1]", "",
+"[^1]: Hatcher. (2002). Algebraic Topology: p0."]},    
+
+// "hogg": {"prefix": "hogg", "body": ["[^1]", "",
+// "[^1]: Hogg et al. (2013). Introduction to Mathematical Statistcs(7th Edition): p0."]},
+"hogg": {"prefix": "hogg", "body": ["[^1]", "",
+"[^1]: Hogg et al. (2018). Introduction to Mathematical Statistcs(8th Edition): p0."]},
+
+"hoffstein": {"prefix": "hoffstein", "body": ["[^1]", "",
+"[^1]: Hoffstein. (2008). An Introduction to Mathematical Cryptography: p0."]},
+
+"hu": {"prefix": "hu", "body": ["[^1]", "",
+"[^1]: Sze-Tsen Hu. (1968). Introduction to Homological Algebra: p0."]},
+
+"matousek": {"prefix": "matousek", "body": ["[^1]", "",
+"[^1]: Matousek. (2007). Understanding and Using Linear Programming: p0."]},    
+
+"mendenhall": {"prefix": "mendenhall", "body": ["[^1]", "",
+"[^1]: Mendenhall. (2012). Introduction to Probability and Statistics (13th Edition): p0."]},
+
+"luenberger": {"prefix": "luenberger", "body": ["[^1]", "",
+"[^1]: Luenberger. (2021). Linear and Nonlinear Programming (5th Edition): p0."]},    
+
+"kimmel": {"prefix": "kimmel", "body": ["[^1]", "",
+    "[^1]: Kimmel, Axelrod. (2006). Branching Processes in Biology: p0."]},
+
+"millman": {"prefix": "millman", "body": ["[^1]", "",
+"[^1]: Millman. (1977). Elements of Differential Geometry: p0."]},
+
+// "munkres": {"prefix": "munkres", "body": ["[^1]", "",
+// "[^1]: Munkres. (2000). Topology(2nd Edition): p0."]},
+
+"munkres": {"prefix": "munkres", "body": ["[^1]", "",
+"[^1]: Munkres. (1984). Elements of Algebraic Topology: p0."]},
+
+"newman": {"prefix": "newman", "body": ["[^1]", "",
+"[^1]: Newman. (2010). Networks: An Introduction: p0."]},
+
+
+"osborne": {"prefix": "osborne", "body": ["[^1]", "",
+"[^1]: Osborne (1999). Complex variables and their applications: p0."]},
+
+"oksendal": {"prefix": "oksendal", "body": ["[^1]", "",
+"[^1]: Øksendal. (2003). Stochastic Differential Equations: An Introduction with Applications: p0."]},
+
+"panik": {"prefix": "panik", "body": ["[^1]", "",
+"[^1]: Panik. (2017). Stochastic Differential Equations: An Introduction with Applications in Population Dynamics Modeling: p0."]},
+
+"rabadan": {"prefix": "rabadan", "body": ["[^1]", "",
+"[^1]: Raul Rabadan. (2020). Topological Data Analysis for Genomics and Evolution: p0."]},
+    
+"strogatz": {"prefix": "strogatz", "body": ["[^1]", "",
+"[^1]: Strogatz. (2015). Nonlinear Dynamics And Chaos: With Applications To Physics, Biology, Chemistry, And Engineering(2nd Edition): p0."]},
+
+"silverman": {"prefix": "silverman", "body": ["[^1]", "",
+"[^1]: Silverman. (2012). A Friendly Introduction to Number Theory (4th Edition): p0."]},
+
+"james": {"prefix": "james", "body": ["[^1]", "",
+"[^1]: James. (2013). An Introduction to Statistical Learning with Applications in R: p0."]},
+
+"johnson": {"prefix": "johnson", "body": ["[^1]", "",
+"[^1]: Johnson. (2013). Applied Multivariate Statistical Analysis(6th Edition): p0."]},
+
+"kreyszig": {"prefix": "kreyszig", "body": ["[^1]", "",
+"[^1]: Kreyszig. (1989). Introductory Functional Analysis with Applications: p0."]},
+
+"vanderbei": {"prefix": "vanderbei", "body": ["[^1]", "",
+"[^1]: Vanderbei. (2020). Linear Programming(5th Edition): p0."]},
+
+
+"wade": {"prefix": "wade", "body": ["[^1]", "",
+"[^1]: Wade. (2013). An Introduction to Analysis(4th Edition): p0."]},
+
+"wiggins": {"prefix": "wiggins", "body": ["[^1]", "",
+"[^1]: Wiggins. (2003). Introduction to Applied Nonlinear Dynamical Systems and Chaos Second Edition(2nd Edition): p0."]},
+
+"wilson": {"prefix": "wilson", "body": ["[^1]", "",
+"[^1]: Wilson. (1970). Introduction to Graph Theory: p0."]},
+
+"york": {"prefix": "york", "body": ["[^1]", "",
+"[^1]: Yorke. (1996). CHAOS: An Introduction to Dynamical Systems: p0."]},
+
+"kim": {"prefix": "kim", "body": ["[^1]", "",
+"[^1]: 김상동, 김필수, 신병춘, 이용훈. (2012). 수치행렬해석: p0."]},
+
+"knu": {"prefix": "knu", "body": ["[^1]", "",
+"[^1]: 경북대학교 통계학과. (2008). 엑셀을 이용한 통계학: p0."]},
+    
+"zomorodian": {"prefix": "zomorodian", "body": ["[^1]", "",
+    "[^1]: Zomorodian. (2005). Computing Persistent Homology"]},
+
+"카테고리": {"prefix": "카테고리", "body": ["[$0](../../categories/$0)"]},
+"줄리아": {"prefix": "줄리아", "body": ["[줄리아](../../categories/줄리아)"]},
+"동역학": {"prefix": "다이내믹스", "body": ["[다이내믹스](../../categories/동역학)"]},
+"TeX": {"prefix": "TeX", "body": ["[$\\TeX$](../../categories/tex)"]},
+"머신러닝": {"prefix": "머신러닝", "body": ["[머신러닝](../../categories/머신러닝)"]},
+"정수론": {"prefix": "정수론", "body": ["[정수론](../../categories/정수론)"]},
+"추상대수": {"prefix": "추상대수", "body": ["[추상대수](../../categories/추상대수)"]},
+"미분방정식": {"prefix": "미분방정식", "body": ["[미분방정식](../../categories/미분방정식)"]},
+"데이터과학": {"prefix": "데이터과학", "body": ["[데이터과학](../../categories/데이터과학)"]},
+"수리통계학": {"prefix": "수리통계학", "body": ["[수리통계학](../../categories/수리통계학)"]},
+"선형대수": {"prefix": "선형대수", "body": ["[선형대수](../../categories/선형대수)"]},
+"행렬대수": {"prefix": "행렬대수", "body": ["[행렬대수](../../categories/행렬대수)"]},
+"파이썬": {"prefix": "파이썬", "body": ["[파이썬](../../categories/프로그래밍#python)"]},
+"매트랩": {"prefix": "매트랩", "body": ["[매트랩](../../categories/매트랩)"]},
+"알": {"prefix": "알", "body": ["[R](../../categories/r)"]},
+
+"중심성": {"prefix": "중심성", "body": ["[중심성](../degree-centality-in-network-theory#중심성)"]},
+
+"40-1": {"prefix": "우함수", "body": ["[우함수](../40)"]},
+"40-2": {"prefix": "기함수", "body": ["[기함수](../40)"]},
+
+"41-1": {"prefix": "테일러정리", "body": ["[테일러정리](../41)"]},
+"41-2": {"prefix": "테일러전개", "body": ["[테일러전개](../41)"]},
+"42-1": {"prefix": "급수전개", "body": ["[급수전개](../42)"]},
+
+"43": {"prefix": "중심극한정리", "body": ["[중심극한정리](../43)"]},
+"47": {"prefix": "채프만-콜모고로프 방정식", "body": ["[채프만-콜모고로프 방정식](../47)"]},
+
+"56-1": {"prefix": "근의공식", "body": ["[근의 공식](../56)"]},
+
+"57-1": {"prefix": "상관관계", "body": ["[상관관계](../57)"]},
+"57-2": {"prefix": "상관계수", "body": ["[상관계수](../57)"]},
+
+"84": {"prefix": "크로네커델타", "body": ["[크로네커델타](../84)"]},
+
+"95-1": {"prefix": "감마함수", "body": ["[감마함수](../95)"]},
+
+"106-1": {"prefix": "합동", "body": ["[합동](../106)"]},
+"106-2": {"prefix": "모듈로", "body": ["[모듈로](../106)"]},
+
+"112-1": {"prefix": "오일러공식", "body": ["[오일러 공식](../112)"]},
+
+"116-1": {"prefix": "대우법", "body": ["[대우법](../116)"]},
+"116-2": {"prefix": "대우명제", "body": ["[대우명제](../116)"]},
+
+"117-1": {"prefix": "귀류법", "body": ["[귀류법](../117)"]},
+"118-1": {"prefix": "수학적귀납법", "body": ["[수학적귀납법](../118)"]},
+
+"169-1": {"prefix": "등차수열", "body": ["[등차수열](../169)"]},
+"170-1": {"prefix": "기하급수", "body": ["[기하급수](../170)"]},
+
+"180-1": {"prefix": "슈프리멈", "body": ["[슈프리멈](../180)"]},
+"180-2": {"prefix": "인피멈", "body": ["[인피멈](../180)"]},
+"180-3": {"prefix": "유계", "body": ["[유계](../180)"]},
+"180-4": {"prefix": "바운디드", "body": ["[바운디드](../180)"]},
+
+"203-1": {"prefix": "스튜던트의정리", "body": ["[스튜던트의 정리](../203)"]},
+
+"205-1": {"prefix": "유클리드공간", "body": ["[유클리드 공간](../205)"]},
+"205-2": {"prefix": "실수", "body": ["[실수](../205)"]},
+
+"213-1": {"prefix": "미적분학의기본정리", "body": ["[미적분학의 기본정리](../213)"]},
+"218-1": {"prefix": "이항계수", "body": ["[이항계수](../218)"]},
+"245-1": {"prefix": "켤레", "body": ["[켤레](../245)"]},
+
+"246-1": {"prefix": "기대값", "body": ["[기대값](../246)"]},
+"246-2": {"prefix": "평균-수리통계", "body": ["[평균](../246)"]},
+"246-3": {"prefix": "분산-수리통계", "body": ["[분산](../246)"]},
+"246-4": {"prefix": "적률-수리통계", "body": ["[적률](../246)"]},
+
+
+"248-1": {"prefix": "적률생성함수", "body": ["[적률생성함수](../248)"]},
+"252-1": {"prefix": "행렬식", "body": ["[행렬식](../252)"]},
+
+"253-1": {"prefix": "선형독립", "body": ["[선형독립](../253)"]},
+
+"254-1": {"prefix": "행벡터", "body": ["[행벡터](../254)"]},
+"254-2": {"prefix": "열벡터", "body": ["[열벡터](../254)"]},
+"254-3": {"prefix": "행공간", "body": ["[행공간](../254)"]},
+"254-4": {"prefix": "열공간", "body": ["[열공간](../254)"]},
+"254-5": {"prefix": "영공간", "body": ["[영공간](../254)"]},
+
+
+"256-1": {"prefix": "외적", "body": ["[외적](../256)"]},
+"257-1": {"prefix": "유클리드놈", "body": ["[유클리드 놈](../257)"]},
+
+"275-1": {"prefix": "이항연산", "body": ["[이항연산](../275)"]},
+"275-2": {"prefix": "마그마", "body": ["[마그마](../275)"]},
+
+"277-1": {"prefix": "항등원", "body": ["[항등원](../277)"]},
+"277-2": {"prefix": "모노이드", "body": ["[모노이드](../277)"]},
+
+"278-1": {"prefix": "군", "body": ["[군](../278)"]},
+"278-2": {"prefix": "그룹", "body": ["[그룹](../278)"]},
+"278-3": {"prefix": "역원", "body": ["[역원](../278)"]},
+
+"281-1": {"prefix": "특이점", "body": ["[특이점](../281)"]},
+"281-2": {"prefix": "극점", "body": ["[극점](../281)"]},
+
+"282-1": {"prefix": "벡터공간", "body": ["[벡터공간](../282)"]},
+"282-2": {"prefix": "영벡터", "body": ["[영벡터](../282)"]},
+
+"309-1": {"prefix": "아벨리안그룹", "body": ["[아벨리안 그룹](../309)"]},
+
+"319-1": {"prefix": "고유값", "body": ["[고유값](../319)"]},
+"319-2": {"prefix": "고유벡터", "body": ["[고유벡터](../319)"]},
+
+"336-1": {"prefix": "정부호", "body": ["[정부호](../336)"]},
+
+"337-1": {"prefix": "카오스-ODE", "body": ["[카오스](../337)"]},
+"337-2": {"prefix": "캐어릭-ODE", "body": ["[캐어릭](../337)"]},
+
+"339-1": {"prefix": "대각화가능", "body": ["[대각화가능](../339)"]},
+"342-1": {"prefix": "슈어 분해", "body": ["[슈어 분해](../342)"]},
+
+"352-1": {"prefix": "아이뎀포텐트", "body": ["[아이뎀포텐트](../352)"]},
+"352-2": {"prefix": "사영행렬", "body": ["[사영행렬](../352)"]},
+"352-3": {"prefix": "멱등행렬", "body": ["[멱등행렬](../352)"]},
+
+"356-1": {"prefix": "최소제곱법", "body": ["[최소제곱법](../356)"]},
+"356-2": {"prefix": "최소제곱", "body": ["[최소제곱](../356)"]},
+
+"364-1": {"prefix": "초기조건에민감", "body": ["[초기조건에 민감](../364)"]},
+"365-1": {"prefix": "아핀변환", "body": ["[아핀 변환](../365)"]},
+
+"374-1": {"prefix": "주분기", "body": ["[주분기](../374)"]},
+"374-2": {"prefix": "다가함수", "body": ["[다가함수](../374)"]},
+
+"381": {"prefix": "거리공간", "body": ["[거리공간](../381)"]},
+
+"382-1": {"prefix": "볼", "body": ["[볼](../382)"]},
+"382-2": {"prefix": "오픈볼", "body": ["[오픈 볼](../382)"]},
+"382-3": {"prefix": "클로즈드볼", "body": ["[클로즈드 볼](../382)"]},
+"382-4": {"prefix": "개집합", "body": ["[개집합](../382)"]},
+"382-5": {"prefix": "폐집합", "body": ["[폐집합](../382)"]},
+"382-6": {"prefix": "열린", "body": ["[열린](../382)"]},
+"382-7": {"prefix": "닫힌", "body": ["[닫힌](../382)"]},
+
+"384-1": {"prefix": "연속-거리공간", "body": ["[연속](../384)"]},
+
+"392": {"prefix": "순환군", "body": ["[순환군](../392)"]},
+
+"398-1": {"prefix": "위상공간", "body": ["[위상공간](../398)"]},
+"398-2": {"prefix": "개집합", "body": ["[개집합](../398)"]},
+"398-3": {"prefix": "폐집합", "body": ["[폐집합](../398)"]},
+
+"403": {"prefix": "아이소멀픽", "body": ["[아이소멀픽](../403)"]},
+
+"405-1": {"prefix": "바운더리", "body": ["[바운더리](../405)"]},
+"405-2": {"prefix": "클로져", "body": ["[클로져](../405)"]},
+"405-3": {"prefix": "인테리어", "body": ["[인테리어](../405)"]},
+
+"421": {"prefix": "대칭군", "body": ["[대칭군](../421)"]},
+
+"427-1": {"prefix": "부분기저", "body": ["[부분기저](../427)"]},
+
+"425": {"prefix": "공분산", "body": ["[공분산](../425)"]},
+"432": {"prefix": "연속-위상", "body": ["[연속](../432)"]},
+"438": {"prefix": "호메오멀픽", "body": ["[호메오멀픽](../438)"]},
+
+"439-1": {"prefix": "몰피즘", "body": ["[몰피즘](../439)"]},
+"439-2": {"prefix": "호모몰피즘", "body": ["[호모몰피즘](../439)"]},
+
+"443-1": {"prefix": "일양분포", "body": ["[일양분포](../443)"]},
+"443-2": {"prefix": "균등분포", "body": ["[균등분포](../443)"]},
+"443-3": {"prefix": "유니폼분포", "body": ["[유니폼분포](../443)"]},
+
+"445": {"prefix": "토션트함수", "body": ["[토션트 함수](../445)"]},
+
+"450-1": {"prefix": "베타함수", "body": ["[베타함수](../450)"]},
+
+"469": {"prefix": "잉여류", "body": ["[잉여류](../469)"]},
+
+"470-1": {"prefix": "시퀀스", "body": ["[시퀀스](../470)"]},
+"470-2": {"prefix": "함수", "body": ["[함수](../470)"]},
+"470-3": {"prefix": "이미지", "body": ["[이미지](../470)"]},
+"470-4": {"prefix": "정의역", "body": ["[정의역](../470)"]},
+"470-5": {"prefix": "공역", "body": ["[공역](../470)"]},
+
+"471-1": {"prefix": "전단사", "body": ["[전단사](../471)"]},
+"471-2": {"prefix": "전사", "body": ["[전사](../471)"]},
+"471-3": {"prefix": "단사", "body": ["[단사](../471)"]},
+"471-4": {"prefix": "역함수", "body": ["[역함수](../471)"]},
+
+"472-1": {"prefix": "원상", "body": ["[원상](../472)"]},
+"478-1": {"prefix": "경로연결", "body": ["[경로연결](../478)"]},
+"479-1": {"prefix": "미분방정식", "body": ["[미분방정식](../479)"]},
+"480-1": {"prefix": "외측도", "body": ["[외측도](../480)"]},
+"483-1": {"prefix": "상미분방정식", "body": ["[상미분방정식](../483)"]},
+
+"489-1": {"prefix": "컴팩트-위상", "body": ["[컴팩트](../489)"]},
+"489-2": {"prefix": "프리컴팩트", "body": ["[프리컴팩트](../489)"]},
+
+"490-1": {"prefix": "시그마필드", "body": ["[시그마필드](../490)"]},
+"490-2": {"prefix": "시그마대수", "body": ["[시그마대수](../490)"]},
+
+"509-1": {"prefix": "기각역", "body": ["[기각역](../509)"]},
+"509-2": {"prefix": "유의수준", "body": ["[유의수준](../509)"]},
+
+
+"498": {"prefix": "확률공간", "body": ["[확률공간](../498) $\\left( \\Omega , \\mathcal{F}, P \\right)$"]},
+"512": {"prefix": "선형결합", "body": ["[선형결합](../512)"]},
+
+
+"518-1": {"prefix": "가측함수", "body": ["[가측함수](../518)"]},
+"518-2": {"prefix": "르벡가측", "body": ["[르벡가측](../518)"]},
+
+
+"524-1": {"prefix": "거의어디서나", "body": ["[거의 어디서나](../524)"]},
+"524-2": {"prefix": "거의확실히", "body": ["[거의 확실히](../524)"]},
+
+"527-1": {"prefix": "르벡적분", "body": ["[르벡적분](../527)"]},
+"527-2": {"prefix": "단순함수", "body": ["[단순함수](../527)"]},
+
+
+"548-1": {"prefix": "회귀분석", "body": ["[회귀분석](../548)"]},
+"549-1": {"prefix": "르벡적분가능", "body": ["[르벡적분가능](../549)"]},
+
+"550-1": {"prefix": "계획행렬", "body": ["[계획행렬](../550)"]},
+"550-2": {"prefix": "디자인매트릭스", "body": ["[디자인 매트릭스](../550)"]},
+
+"563-1": {"prefix": "최대최소값정리", "body": ["[최대최소값 정리](../563)"]},
+
+"571-1": {"prefix": "정확도", "body": ["[정확도](../571)"]},
+
+"587-1": {"prefix": "환", "body": ["[환](../587)"]},
+"587-2": {"prefix": "링", "body": ["[링](../587)"]},
+"587-3": {"prefix": "정수환", "body": ["[정수환 $\\mathbb{Z}$](../587)"]},
+
+"589-1": {"prefix": "부분군", "body": ["[부분군](../589)"]},
+"589-2": {"prefix": "서브그룹", "body": ["[서브그룹](../589)"]},
+
+"590-1": {"prefix": "부분환", "body": ["[부분환](../590)"]},
+"590-2": {"prefix": "서브링", "body": ["[서브 링](../590)"]},
+
+"605-1": {"prefix": "르벡공간", "body": ["[르벡공간](../605)"]},
+"607-1": {"prefix": "칸토어 집합", "body": ["[칸토어 집합](../607)"]},
+"619-1": {"prefix": "직합", "body": ["[직합](../619)"]},
+
+"620-1": {"prefix": "곱공간", "body": ["[곱공간](../620)"]},
+"620-2": {"prefix": "프로젝션", "body": ["[프로젝션](../620)"]},
+
+"622-1": {"prefix": "커널-추상대수", "body": ["[커널](../622)"]},
+"628-1": {"prefix": "몫군", "body": ["[몫군](../628)"]},
+"630-1": {"prefix": "그룹액션", "body": ["[그룹액션](../630)"]},
+"646-1": {"prefix": "함수공간-위상", "body": ["[함수공간](../646)"]},
+
+"650-1": {"prefix": "잔차", "body": ["[잔차](../650)"]},
+"650-2": {"prefix": "오차", "body": ["[오차](../650)"]},
+
+"665": {"prefix": "몫공간", "body": ["[몫공간](../665)"]},
+
+"666-1": {"prefix": "다중회귀분석", "body": ["[다중회귀분석](../666)"]},
+
+"673-1": {"prefix": "다양체", "body": ["[다양체](../673)"]},
+"673-2": {"prefix": "매니폴드", "body": ["[매니폴드](../673)"]},
+
+"675-1": {"prefix": "모형진단", "body": ["[모형진단](../675)"]},
+
+"680-1": {"prefix": "황금비", "body": ["[황금비](../680)"]},
+"680-2": {"prefix": "피보나치수열", "body": ["[피보나치 수열](../680)"]},
+
+"687-1": {"prefix": "오일러메소드", "body": ["[오일러 메소드](../687)"]},
+"705-1": {"prefix": "유한차원", "body": ["[유한차원](../705)"]},
+
+"702-1": {"prefix": "베이지안", "body": ["[베이지안](../702)"]},
+
+"715-1": {"prefix": "체", "body": ["[체](../715)"]},
+"715-2": {"prefix": "필드", "body": ["[필드](../715)"]},
+"715-3": {"prefix": "단원", "body": ["[단원](../715)"]},
+"715-4": {"prefix": "단위원-대수", "body": ["[단위원](../715)"]},
+"715-5": {"prefix": "유닛", "body": ["[유닛](../715)"]},
+"715-6": {"prefix": "유니티", "body": ["[유니티](../715)"]},
+
+"717": {"prefix": "멱등원", "body": ["[멱등원](../717)"]},
+
+"719-1": {"prefix": "영인자", "body": ["[영인자](../719)"]},
+"719-2": {"prefix": "정역", "body": ["[정역](../719)"]},
+"719-3": {"prefix": "인티그럴도메인", "body": ["[인티그럴 도메인](../719)"]},
+
+"721": {"prefix": "다항식환", "body": ["[다항식환](../721)"]},
+
+"722-1": {"prefix": "차분", "body": ["[차분](../722)"]},
+
+"728-1": {"prefix": "작용소", "body": ["[작용소](../728)"]},
+"728-2": {"prefix": "오퍼레이터", "body": ["[오퍼레이터](../728)"]},
+
+"739-1": {"prefix": "아이디얼", "body": ["[아이디얼](../739)"]},
+"776-1": {"prefix": "힐베르트공간", "body": ["[힐베르트공간](../776)"]},
+
+"796-1": {"prefix": "RK4", "body": ["[RK4](../796)"]},
+"796-2": {"prefix": "룽게-쿠타 메소드", "body": ["[룽게-쿠타 메소드](../796)"]},
+
+"797-1": {"prefix": "확대체", "body": ["[확대체](../797)"]},
+"808-1": {"prefix": "다중공선성", "body": ["[다중공선성](../808)"]},
+"809-1": {"prefix": "대수적폐포", "body": ["[대수적 폐포](../809)"]},
+
+"812-1": {"prefix": "주성분분석", "body": ["[주성분 분석](../812)"]},
+"812-2": {"prefix": "PCA", "body": ["[PCA](../812)"]},
+
+"825-1": {"prefix": "주아이디얼정역", "body": ["[주아이디얼정역](../825)"]},
+"825-2": {"prefix": "PID", "body": ["[PID](../825)"]},
+
+"827-1": {"prefix": "유일인수분해정역", "body": ["[유일인수분해정역](../827)"]},
+"827-2": {"prefix": "UFD", "body": ["[UFD](../827)"]},
+
+"828-1": {"prefix": "적분", "body": ["[적분](../828)"]},
+"828-2": {"prefix": "정적분", "body": ["[정적분](../828)"]},
+"828-3": {"prefix": "리만적분", "body": ["[리만적분](../828)"]},
+
+"848-1": {"prefix": "단조함수", "body": ["[단조함수](../848)"]},
+"848-2": {"prefix": "증가함수", "body": ["[증가함수](../848)"]},
+"848-3": {"prefix": "감소함수", "body": ["[감소함수](../848)"]},
+
+"856-1": {"prefix": "동역학계-map", "body": ["[동역학계](../856)"]},
+"856-2": {"prefix": "맵", "body": ["[맵](../856)"]},
+
+"857-1": {"prefix": "확률과정", "body": ["[확률과정](../857)"]},
+"857-2": {"prefix": "상태공간", "body": ["[상태공간](../857)"]},
+
+"859-1": {"prefix": "마코프체인", "body": ["[마코프체인](../859)"]},
+"859-2": {"prefix": "이산마코프체인", "body": ["[이산마코프체인](../859)"]},
+"859-3": {"prefix": "마코프프로세스", "body": ["[마코프프로세스](../859)"]},
+
+"860-1": {"prefix": "로지스틱맵", "body": ["[로지스틱 맵](../860)"]},
+"866-1": {"prefix": "교차검증", "body": ["[교차검증](../866)"]},
+
+"867-1": {"prefix": "로렌츠어트랙터", "body": ["[로렌츠 어트랙터](../867)"]},
+
+"878": {"prefix": "헤비사이드 계단 함수", "body": ["[헤비사이드 계단 함수](../878)"]},
+"900": {"prefix": "시계열", "body": ["[시계열](../900)"]},
+"943": {"prefix": "인크리먼트", "body": ["[인크리먼트](../943)"]},
+
+"957-1": {"prefix": "위너프로세스", "body": ["[위너 프로세스](../957)"]},
+"957-2": {"prefix": "브라운모션", "body": ["[브라운 모션](../957)"]},
+
+"960-1": {"prefix": "관계", "body": ["[관계](../960)"]},
+"960-2": {"prefix": "이항관계", "body": ["[이항관계](../960)"]},
+
+"962-1": {"prefix": "인공신경망", "body": ["[인공신경망](../962)"]},
+
+"966-1": {"prefix": "그래프", "body": ["[그래프](../966)"]},
+"966-2": {"prefix": "네트워크", "body": ["[네트워크](../966)"]},
+"966-3": {"prefix": "심플그래프", "body": ["[심플그래프](../966)"]},
+
+"967-1": {"prefix": "손실함수", "body": ["[손실함수](../967)"]},
+
+"970-1": {"prefix": "스칼라함수", "body": ["[스칼라함수](../970)"]},
+"970-2": {"prefix": "벡터함수", "body": ["[벡터함수](../970)"]},
+"970-3": {"prefix": "벡터필드", "body": ["[벡터필드](../970)"]},
+"970-4": {"prefix": "다변수함수", "body": ["[다변수함수](../970)"]},
+
+"972-1": {"prefix": "조각마다", "body": ["[조각마다](../972)"]},
+"972-2": {"prefix": "피스와이즈", "body": ["[피스와이즈](../972)"]},
+
+"978-1": {"prefix": "베이신", "body": ["[베이신](../978)"]},
+"989-1": {"prefix": "자코비안", "body": ["[자코비안](../989)"]},
+"991-1": {"prefix": "활성화함수", "body": ["[활성화함수](../991)"]},
+"996-1": {"prefix": "딥러닝", "body": ["[딥러닝](../996)"]},
+
+"1000-1": {"prefix": "합성곱", "body": ["[합성곱](../1000)"]},
+"1000-2": {"prefix": "컨볼루션", "body": ["[컨볼루션](../1000)"]},
+
+"1001-1": {"prefix": "열방정식", "body": ["[열방정식](../1001)"]},
+"1001-2": {"prefix": "확산방정식", "body": ["[확산방정식](../1001)"]},
+
+"1006-1": {"prefix": "바이퍼케이션다이어그램", "body": ["[바이퍼케이션 다이어그램](../1006)"]},
+"1016-1": {"prefix": "인터폴레이션", "body": ["[인터폴레이션](../1016)"]},
+
+"1033-1": {"prefix": "동치", "body": ["[동치](../1033)"]},
+"1033-2": {"prefix": "동치관계", "body": ["[동치관계](../1033)"]},
+
+"1036-1": {"prefix": "스플라인", "body": ["[스플라인](../1036)"]},
+"1040-1": {"prefix": "텐서", "body": ["[텐서](../1040)"]},
+"1045-1": {"prefix": "B-스플라인", "body": ["[B-스플라인](../1045)"]},
+
+"1049-1": {"prefix": "분할", "body": ["[분할](../1049)"]},
+"1049-2": {"prefix": "파티션", "body": ["[파티션](../1049)"]},
+
+"1050-1": {"prefix": "동치류", "body": ["[동치류](../1050)"]},
+"1052-1": {"prefix": "다차원맵", "body": ["[다차원 맵](../1052)"]},
+
+"1079-1": {"prefix": "불변", "body": ["[불변](../1079)"]},
+"1085-1": {"prefix": "약도함수", "body": ["[약도함수](../1085)"]},
+"1128-1": {"prefix": "수치적적분", "body": ["[수치적 적분](../1128)"]},
+
+"1184-1": {"prefix": "수렴", "body": ["[수렴](../1184)"]},
+"1184-2": {"prefix": "발산", "body": ["[발산](../1184)"]},
+
+"1190-1": {"prefix": "코시시퀀스", "body": ["[코시 시퀀스](../1190)"]},
+
+"1198-1": {"prefix": "리미트슈프리멈", "body": ["[리미트 슈프리멈](../1198)"]},
+"1198-2": {"prefix": "리미트인피멈", "body": ["[리미트 인피멈](../1198)"]},
+
+"1206-1": {"prefix": "연속-해석개론", "body": ["[연속](../1206)"]},
+
+"1210-1": {"prefix": "미분가능", "body": ["[미분가능](../1210)"]},
+"1210-2": {"prefix": "도함수", "body": ["[도함수](../1210)"]},
+
+"1225-1": {"prefix": "놈", "body": ["[놈](../1225)"]},
+"1225-2": {"prefix": "놈공간", "body": ["[놈 공간](../1225)"]},
+"1225-3": {"prefix": "놈드스페이스", "body": ["[놈드 스페이스](../1225)"]},
+
+"1262": {"prefix": "동적계획법", "body": ["[동적계획법](../1262)"]},
+
+"1283-1": {"prefix": "시간복잡도", "body": ["[시간복잡도](../1283)"]},
+"1283-2": {"prefix": "공간복잡도", "body": ["[공간복잡도](../1283)"]},
+
+"1268-1": {"prefix": "왜도", "body": ["[왜도](../1268)"]},
+"1271-1": {"prefix": "첨도", "body": ["[첨도](../1271)"]},
+
+"1299-1": {"prefix": "명제", "body": ["[명제](../1299)"]},
+"1299-2": {"prefix": "진술", "body": ["[진술](../1299)"]},
+"1299-3": {"prefix": "부정", "body": ["[부정](../1299)"]},
+"1299-4": {"prefix": "논리곱", "body": ["[논리곱](../1299)"]},
+"1299-5": {"prefix": "논리합", "body": ["[논리합](../1299)"]},
+"1299-6": {"prefix": "동치", "body": ["[동치](../1299)"]},
+
+"1300-1": {"prefix": "특성함수", "body": ["[특성함수](../1300)"]},
+"1302-1": {"prefix": "측도공간", "body": ["[측도공간](../1302)"]},
+
+"1304-1": {"prefix": "동치조건", "body": ["[동치조건](../1304)"]},
+"1304-2": {"prefix": "필요충분조건", "body": ["[필요충분조건](../1304)"]},
+
+"1316-1": {"prefix": "집합", "body": ["[집합](../1316)"]},
+"1316-2": {"prefix": "원소", "body": ["[원소](../1316)"]},
+
+"1329-1": {"prefix": "부분집합", "body": ["[부분집합](../1329)"]},
+"1329-2": {"prefix": "포함관계", "body": ["[포함관계](../1329)"]},
+
+"1337-1": {"prefix": "공집합", "body": ["[공집합](../1337)"]},
+"1337-2": {"prefix": "홑원소 집합", "body": ["[홑원소 집합](../1337)"]},
+
+"1341-1": {"prefix": "교집합", "body": ["[교집합](../1341)"]},
+"1341-2": {"prefix": "서로소-집합론", "body": ["[서로소](../1341)"]},
+
+"1342-1": {"prefix": "행렬함수", "body": ["[행렬함수](../1342)"]},
+"1344-1": {"prefix": "합집합", "body": ["[합집합](../1344)"]},
+"1346-1": {"prefix": "멱집합", "body": ["[멱집합](../1346)"]},
+"1348-1": {"prefix": "자연수", "body": ["[자연수](../1348)"]},
+"1349-1": {"prefix": "마틴게일", "body": ["[마틴게일](../1349)"]},
+"1358-1": {"prefix": "인덱스 집합", "body": ["[인덱스 집합](../1358)"]},
+
+"1360-1": {"prefix": "데카르트곱", "body": ["[데카르트 곱](../1360)"]},
+"1360-2": {"prefix": "순서쌍", "body": ["[순서쌍](../1360)"]},
+"1360-3": {"prefix": "페어", "body": ["[페어](../1360)"]},
+
+"1368-1": {"prefix": "일급객체", "body": ["[일급객체](../1368)"]},
+
+"1381-1": {"prefix": "유한", "body": ["[유한](../1381)"]},
+"1381-2": {"prefix": "무한", "body": ["[무한](../1381)"]},
+"1381-3": {"prefix": "유한집합", "body": ["[유한집합](../1381)"]},
+"1381-4": {"prefix": "무한집합", "body": ["[무한집합](../1381)"]},
+
+"1383-1": {"prefix": "가산집합", "body": ["[가산집합](../1383)"]},
+"1383-2": {"prefix": "비가산집합", "body": ["[비가산집합](../1383)"]},
+
+"1395-1": {"prefix": "기수", "body": ["[기수](../1395)"]},
+"1395-2": {"prefix": "카디널러티", "body": ["[카디널러티](../1395)"]},
+
+"1421-1": {"prefix": "전순서집합", "body": ["[전순서집합](../1421)"]},
+"1421-2": {"prefix": "부분순서", "body": ["[부분순서](../1421)"]},
+
+"1424-1": {"prefix": "내부", "body": ["[내부](../1424)"]},
+
+"1431-1": {"prefix": "확률", "body": ["[확률](../1431)"]},
+"1431-2": {"prefix": "사건", "body": ["[사건](../1431)"]},
+"1431-3": {"prefix": "표본공간", "body": ["[표본공간](../1431)"]},
+
+"1433-1": {"prefix": "확률변수", "body": ["[확률변수](../1433)"]},
+"1433-2": {"prefix": "확률분포", "body": ["[확률분포](../1433)"]},
+"1433-3": {"prefix": "확률밀도함수", "body": ["[확률밀도함수](../1433)"]},
+"1433-4": {"prefix": "확률질량함수", "body": ["[확률질량함수](../1433)"]},
+"1433-5": {"prefix": "누적분포함수", "body": ["[누적분포함수](../1433)"]},
+"1433-6": {"prefix": "서포트-수리통계", "body": ["[서포트](../1433)"]},
+
+"1434-1": {"prefix": "그리디알고리즘", "body": ["[그리디 알고리즘](../1434)"]},
+
+"1439-1": {"prefix": "부분공간", "body": ["[부분공간](../1439)"]},
+
+
+"1449-1": {"prefix": "랜덤벡터", "body": ["[랜덤벡터](../1449)"]},
+"1449-2": {"prefix": "다변량분포", "body": ["[다변량분포](../1449)"]},
+
+"1454-1": {"prefix": "매크로", "body": ["[매크로](../1454)"]},
+"1458-1": {"prefix": "조건부확률", "body": ["[조건부확률](../1458)"]},
+"1461-1": {"prefix": "독립-확률변수", "body": ["[독립](../1461)"]},
+
+"1463-1": {"prefix": "최적화", "body": ["[최적화](../1463)"]},
+"1463-2": {"prefix": "목적함수", "body": ["[목적 함수](../1463)"]},
+"1463-3": {"prefix": "최적해", "body": ["[최적해](../1463)"]},
+
+"1469-1": {"prefix": "iid", "body": ["[iid](../1469)"]},
+"1477-1": {"prefix": "팩토리얼", "body": ["[팩토리얼](../1477)"]},
+"1480-1": {"prefix": "이항분포", "body": ["[이항분포](../1480)"]},
+
+"1485-1": {"prefix": "카오스-맵", "body": ["[카오스](../1485)"]},
+"1485-2": {"prefix": "캐어릭-맵", "body": ["[캐어릭](../1485)"]},
+
+"1486-1": {"prefix": "기하분포", "body": ["[기하분포](../1486)"]},
+"1491-1": {"prefix": "푸아송분포", "body": ["[푸아송분포](../1491)"]},
+
+"1493-1": {"prefix": "어트랙터", "body": ["[어트랙터](../1493)"]},
+
+"1496-1": {"prefix": "차수-그래프이론", "body": ["[차수](../1496)"]},
+
+"1497-1": {"prefix": "카오스", "body": ["[카오스](../1497)"]},
+"1497-2": {"prefix": "캐어릭", "body": ["[캐어릭](../1497)"]},
+
+"1499-1": {"prefix": "인접행렬", "body": ["[인접행렬](../1499)"]},
+
+"1503-1": {"prefix": "베셀함수", "body": ["[베셀함수](../1503)"]},
+
+"1505-1": {"prefix": "자율시스템", "body": ["[자율시스템](../1505)"]},
+"1505-2": {"prefix": "고정점-연속시스템", "body": ["[고정점](../1505)"]},
+"1505-3": {"prefix": "동역학계-ODE", "body": ["[동역학계](../1505)"]},
+
+"1507-1": {"prefix": "플로우", "body": ["[플로우](../1507)"]},
+"1507-2": {"prefix": "트래젝터리", "body": ["[트래젝터리](../1507)"]},
+"1507-3": {"prefix": "타임에볼루션", "body": ["[타임에볼루션](../1507)"]},
+
+
+"1510": {"prefix": "지수분포", "body": ["[지수분포](../1510)"]},
+"1517": {"prefix": "감마분포", "body": ["[감마분포](../1517)"]},
+
+"1520-1": {"prefix": "널그래프", "body": ["[널 그래프](../1520)"]},
+"1520-2": {"prefix": "컴플리트그래프", "body": ["[컴플리트 그래프](../1520)"]},
+
+"1530-1": {"prefix": "거리-그래프", "body": ["[거리](../1530)"]},
+
+"1540": {"prefix": "베타분포", "body": ["[베타분포](../1540)"]},
+
+"1576-1": {"prefix": "연결그래프", "body": ["[연결그래프](../1576)"]},
+"1583-1": {"prefix": "샤우더 기저", "body": ["[샤우더 기저](../1583)"]},
+
+"1594-1": {"prefix": "서포트-일반", "body": ["[서포트](../1594)"]},
+"1594-2": {"prefix": "스무스", "body": ["[스무스](../1594)"]},
+
+"1600": {"prefix": "카이제곱분포", "body": ["[카이제곱분포](../1600)"]},
+"1606": {"prefix": "F-분포", "body": ["[F-분포](../1606)"]},
+
+"1645-1": {"prefix": "정규분포", "body": ["[정규분포](../1645)"]},
+"1645-2": {"prefix": "표준정규분포", "body": ["[표준정규분포](../1645)"]},
+
+"1667": {"prefix": "t-분포", "body": ["[t-분포](../1667)"]},
+
+"1678-1": {"prefix": "중력", "body": ["[중력](../1678)"]},
+
+"1685-1": {"prefix": "타원", "body": ["[타원](../1685)"]},
+
+"1693-1": {"prefix": "오빗-ODE", "body": ["[오빗](../1693)"]},
+"1693-2": {"prefix": "리미트사이클", "body": ["[리미트 사이클](../1693)"]},
+"1693-3": {"prefix": "피리어딕-ODE", "body": ["[피리어딕](../1693)"]},
+
+"1705-1": {"prefix": "컴팩트-거리", "body": ["[컴팩트](../1705)"]},
+"1709-1": {"prefix": "선형화", "body": ["[선형화](../1709)"]},
+
+"1715-1": {"prefix": "샘플", "body": ["[샘플](../1715)"]},
+"1715-2": {"prefix": "랜덤샘플", "body": ["[랜덤샘플](../1715)"]},
+"1715-3": {"prefix": "실현", "body": ["[실현](../1715)"]},
+
+"1730-1": {"prefix": "통계량-수리통계", "body": ["[통계량](../1730)"]},
+"1730-2": {"prefix": "추정량", "body": ["[추정량](../1730)"]},
+
+"1732-1": {"prefix": "신뢰구간", "body": ["[신뢰구간](../1732)"]},
+
+"1733-1": {"prefix": "새들", "body": ["[새들](../1733)"]},
+"1733-2": {"prefix": "스테이블", "body": ["[스테이블](../1733)"]},
+"1733-3": {"prefix": "언스테이블", "body": ["[언스테이블](../1733)"]},
+"1733-4": {"prefix": "안정성-ODE", "body": ["[안정성](../1733)"]},
+"1733-5": {"prefix": "하이퍼볼릭-동역학", "body": ["[하이퍼볼릭](../1733)"]},
+
+"1745-1": {"prefix": "불편추정량", "body": ["[불편추정량](../1745)"]},
+"1749-1": {"prefix": "쌍곡함수", "body": ["[쌍곡함수](../1749)"]},
+"1769-1": {"prefix": "시그모이드 함수", "body": ["[시그모이드 함수](../1769)"]},
+"1772-1": {"prefix": "볼륨", "body": ["[볼륨](../1772)"]},
+"1773-1": {"prefix": "전미분", "body": ["[전미분](../1773)"]},
+"1775-1": {"prefix": "로지스틱 함수", "body": ["[로지스틱 함수](../1775)"]},
+"1789-1": {"prefix": "확률수렴", "body": ["[확률수렴](../1789)"]},
+"1790-1": {"prefix": "지시함수", "body": ["[지시함수](../1790)"]},
+
+"1807": {"prefix": "레귤러라이제이션", "body": ["[레귤러라이제이션](../1807)"]},
+
+"1818-1": {"prefix": "편미분방정식", "body": ["[편미분방정식](../1818)"]},
+
+"1822-1": {"prefix": "리미트셋", "body": ["[리미트 셋](../1822)"]},
+"1822-2": {"prefix": "오메가리미트셋", "body": ["[오메가 리미트 셋](../1822)"]},
+"1822-3": {"prefix": "알파리미트셋", "body": ["[알파 리미트 셋](../1822)"]},
+
+"1828-1": {"prefix": "염기서열", "body": ["[염기서열](../1828)"]},
+"1832-1": {"prefix": "주요염기", "body": ["[주요 염기](../1832)"]},
+"1833-1": {"prefix": "불연속", "body": ["[불연속](../1833)"]},
+"1842-1": {"prefix": "내적공간", "body": ["[내적공간](../1842)"]},
+"1853-1": {"prefix": "시벤코 정리", "body": ["[시벤코 정리](../1853)"]},
+
+"1865-1": {"prefix": "점화식", "body": ["[점화식](../1865)"]},
+"1865-2": {"prefix": "재귀함수", "body": ["[재귀함수](../1865)"]},
+
+"1867-1": {"prefix": "부분적분법", "body": ["[부분적분법](../1867)"]},
+
+"1873-1": {"prefix": "시뮬레이션", "body": ["[시뮬레이션](../1873)"]},
+"1873-2": {"prefix": "에이전트기반시뮬레이션", "body": ["[에이전트 기반 시뮬레이션](../1873)"]},
+
+"1874-1": {"prefix": "서열정렬", "body": ["[서열정렬](../1874)"]},
+"1878-1": {"prefix": "갭페널티", "body": ["[갭 페널티](../1878)"]},
+"1881-1": {"prefix": "치환행렬", "body": ["[치환행렬](../1881)"]},
+"1887-1": {"prefix": "선형회귀", "body": ["[선형회귀](../1887)"]},
+"1888-1": {"prefix": "분포수렴", "body": ["[분포수렴](../1888)"]},
+
+"1898-1": {"prefix": "푸리에변환", "body": ["[푸리에변환](../1898)"]},
+
+
+"1912-1": {"prefix": "직교", "body": ["[직교](../1912)"]},
+"1912-2": {"prefix": "정규직교", "body": ["[정규직교](../1912)"]},
+
+"1914-1": {"prefix": "컨벡스집합", "body": ["[컨벡스 집합](../1914)"]},
+
+"1924-1": {"prefix": "트레이스", "body": ["[트레이스](../1924)"]},
+"1924-2": {"prefix": "대각합", "body": ["[대각합](../1924)"]},
+
+"1915-1": {"prefix": "로지스틱성장", "body": ["[로지스틱성장](../1915)"]},
+
+"1929-1": {"prefix": "해석적", "body": ["[해석적](../1929)"]},
+"1929-2": {"prefix": "연속-복소해석", "body": ["[해석적](../1929)"]},
+
+
+"1947": {"prefix": "벡터", "body": ["[벡터](../1947)"]},
+"1950": {"prefix": "공분산행렬", "body": ["[공분산행렬](../1950)"]},
+"1954": {"prefix": "다변량정규분포", "body": ["[다변량정규분포](../1954)"]},
+"1955": {"prefix": "행렬", "body": ["[행렬](../1955)"]},
+
+"1956-1": {"prefix": "정방행렬", "body": ["[정방행렬](../1956)"]},
+"1956-2": {"prefix": "정사각행렬", "body": ["[정사각행렬](../1956)"]},
+
+"1957-1": {"prefix": "행렬곱", "body": ["[행렬곱](../1957)"]},
+
+"1958-1": {"prefix": "대각행렬", "body": ["[대각행렬](../1958)"]},
+"1958-2": {"prefix": "대각성분", "body": ["[대각성분](../1958)"]},
+
+"2002-1": {"prefix": "롯카-볼테라 포식자-피식자 모델", "body": ["[롯카-볼테라 포식자-피식자 모델](../2002)"]},
+"2004-1": {"prefix": "롯카-볼테라 경쟁 모델", "body": ["[롯카-볼테라 경쟁 모델](../2004)"]},
+"2023-1": {"prefix": "기초감염재생산수", "body": ["[기초감염재생산수](../2023)"]},
+"2025-1": {"prefix": "SIR 모델", "body": ["[SIR 모델](../2025)"]},
+
+"2026-1": {"prefix": "최대우도추정량", "body": ["[최대우도추정량](../2026)"]},
+"2026-2": {"prefix": "MLE", "body": ["[MLE](../2026)"]},
+
+"2027-1": {"prefix": "최대값", "body": ["[최대값](../2027)"]},
+"2027-2": {"prefix": "최소값", "body": ["[최소값](../2027)"]},
+
+"2028-1": {"prefix": "SIS 모델", "body": ["[SIS 모델](../2028)"]},
+"2033-1": {"prefix": "샤넌정보", "body": ["[샤넌정보](../2033)"]},
+"2034-1": {"prefix": "피셔정보", "body": ["[피셔 정보](../2034)"]},
+"2035-1": {"prefix": "샤넌엔트로피", "body": ["[샤넌 엔트로피](../2035)"]},
+"2035-2": {"prefix": "엔트로피", "body": ["[엔트로피](../2035)"]},
+
+"2038-1": {"prefix": "직교-기하", "body": ["[직교](../2038)"]},
+"2038-2": {"prefix": "수직", "body": ["[수직](../2038)"]},
+"2038-3": {"prefix": "각도", "body": ["[각도](../2038)"]},
+
+"2039-2": {"prefix": "천장함수", "body": ["[천장함수](../2039)"]},
+"2039-3": {"prefix": "바닥함수", "body": ["[바닥함수](../2039)"]},
+
+"2042-1": {"prefix": "직선", "body": ["[직선](../2042)"]},
+"2042-2": {"prefix": "평면", "body": ["[평면](../2042)"]},
+"2042-3": {"prefix": "구", "body": ["[구](../2042)"]},
+
+"2044-1": {"prefix": "푸앙카레맵", "body": ["[푸앙카레 맵](../2044)"]},
+
+"2045-1": {"prefix": "크로스엔트로피", "body": ["[크로스 엔트로피](../2045)"]},
+
+"2046-1": {"prefix": "복소수", "body": ["[복소수](../2046)"]},
+"2046-2": {"prefix": "복소평면", "body": ["[복소평면](../2046)"]},
+"2046-3": {"prefix": "허수", "body": ["[허수](../2046)"]},
+
+"2047-1": {"prefix": "쿨백-라이블러발산", "body": ["[쿨백-라이블러 발산](../2047)"]},
+"2050-1": {"prefix": "주기함수", "body": ["[주기함수](../2047)"]},
+
+"2056-1": {"prefix": "삼각함수", "body": ["[삼각함수](../2056)"]},
+"2056-2": {"prefix": "사인", "body": ["[사인](../2056)"]},
+"2056-3": {"prefix": "코사인", "body": ["[코사인](../2056)"]},
+
+"2057": {"prefix": "라오-크래머하한", "body": ["[라오-크래머 하한](../2057)"]},
+"2058": {"prefix": "다항함수", "body": ["[다항함수](../2058)"]},
+"2060": {"prefix": "지수함수", "body": ["[지수함수](../2060)"]},
+"2061": {"prefix": "충분통계량", "body": ["[충분통계량](../2061)"]},
+
+"2062-1": {"prefix": "곡선", "body": ["[곡선](../2062)"]},
+"2062-2": {"prefix": "커브", "body": ["[커브](../2062)"]},
+"2062-3": {"prefix": "정칙곡선", "body": ["[정칙 곡선](../2062)"]},
+
+"2063-1": {"prefix": "로그함수", "body": ["[로그 함수](../2063)"]},
+"2064-1": {"prefix": "재매개변수화", "body": ["[재매개변수화](../2064)"]},
+"2066-1": {"prefix": "탄젠트", "body": ["[탄젠트](../2066)"]},
+"2071-1": {"prefix": "동역학계", "body": ["[동역학계](../2071)"]},
+
+"2074-1": {"prefix": "오빗-맵", "body": ["[오빗](../2074)"]},
+"2074-2": {"prefix": "페이즈포트레이트", "body": ["[페이즈 포트레이트](../2074)"]},
+"2074-3": {"prefix": "페이즈플레인", "body": ["[페이즈 플레인](../2074)"]},
+
+"2084-1": {"prefix": "네이만 인수분해 정리", "body": ["[네이만 인수분해 정리](../2084)"]},
+"2092-1": {"prefix": "폐곡선", "body": ["[폐곡선](../2092)"]},
+
+"2091-1": {"prefix": "역삼각함수", "body": ["[역삼각함수](../2091-1)"]},
+
+"2094-1": {"prefix": "단순곡선", "body": ["[단순곡선](../2094)"]},
+"2098-1": {"prefix": "회전수", "body": ["[회전수](../2098)"]},
+"2106-1": {"prefix": "곡면", "body": ["[곡면](../2106)"]},
+"2111-1": {"prefix": "이토적분", "body": ["[이토 적분](../2111)"]},
+"2114-1": {"prefix": "랜덤 네트워크", "body": ["[랜덤 네트워크](../2114)"]},
+"2119-1": {"prefix": "이토프로세스", "body": ["[이토 프로세스](../2119)"]},
+"2120-1": {"prefix": "프로퍼티-줄리아", "body": ["[프로퍼티](../2120)"]},
+"2121-1": {"prefix": "이토공식", "body": ["[이토 공식](../2121)"]},
+"2122-1": {"prefix": "차수분포", "body": ["[차수분포](../2122)"]},
+"2125-1": {"prefix": "확률미분방정식", "body": ["[확률미분방정식](../2125)"]},
+"2129-1": {"prefix": "프로베니우스놈", "body": ["[프로베니우스 놈](../2129)"]},
+
+"2137-1": {"prefix": "약수", "body": ["[약수](../2137)"]},
+"2137-2": {"prefix": "배수", "body": ["[배수](../2137)"]},
+"2137-3": {"prefix": "최대공약수", "body": ["[최대공약수](../2137)"]},
+"2137-4": {"prefix": "서로소-정수론", "body": ["[서로소](../2137)"]},
+
+"2139-1": {"prefix": "나눈다", "body": ["[나눈다](../2139)"]},
+"2139-2": {"prefix": "몫", "body": ["[몫](../2139)"]},
+"2139-3": {"prefix": "나머지", "body": ["[나머지](../2139)"]},
+
+"2141-1": {"prefix": "짝수", "body": ["[짝수](../2141)"]},
+
+"2154-1": {"prefix": "지오메트릭 브라우니안 모션", "body": ["[지오메트릭 브라우니안 모션](../2154)"]},
+"2154-2": {"prefix": "기하 브라운 운동", "body": ["[기하 브라운 운동](../2154)"]},
+
+"2159-1": {"prefix": "가우스 과정", "body": ["[가우스 과정](../2159)"]},
+"2159-2": {"prefix": "가우시안 프로세스", "body": ["[가우시안 프로세스](../2159)"]},
+
+"2163-1": {"prefix": "소수", "body": ["[소수](../2163)"]},
+"2163-2": {"prefix": "합성수", "body": ["[합성수](../2163)"]},
+
+"2164-1": {"prefix": "CYBOS Plus", "body": ["[CYBOS Plus](../2164)"]},
+"2175-1": {"prefix": "커플드다이내믹시스템", "body": ["[커플드 다이내믹 시스템](../2175)"]},
+"2181-1": {"prefix": "파레토 분포", "body": ["[파레토 분포](../2181)"]},
+"2183-1": {"prefix": "스케일-프리 네트워크", "body": ["[스케일-프리 네트워크](../2183)"]},
+"2187-1": {"prefix": "바라바시-알버트 모델", "body": ["[바라바시-알버트 모델](../2187)"]},
+"2189-1": {"prefix": "허브 노드", "body": ["[허브 노드](../2189)"]},
+
+"2190-0": {"prefix": "타석", "body": ["[타석](../2190)"]},
+"2192-1": {"prefix": "타수", "body": ["[타수](../2192)"]},
+"2194-1": {"prefix": "안타", "body": ["[안타](../2194)"]},
+"2195-1": {"prefix": "심볼", "body": ["[심볼](../2195)"]},
+"2196-1": {"prefix": "홈런", "body": ["[홈런](../2196)"]},
+"2198-1": {"prefix": "사사구", "body": ["[사사구](../2198)"]},
+"2200-1": {"prefix": "희생타", "body": ["[희생타](../2200)"]},
+
+"2201-1": {"prefix": "페어", "body": ["[페어](../2201)"]},
+"2201-2": {"prefix": "딕셔너리-줄리아", "body": ["[딕셔너리](../2201)"]},
+
+"2202": {"prefix": "타율", "body": ["[타율](../2202)"]},
+"2204": {"prefix": "장타율", "body": ["[장타율](../2204)"]},
+"2206": {"prefix": "출루율", "body": ["[출루율](../2206)"]},
+
+"2207-1": {"prefix": "선형계획법", "body": ["[선형계획법](../2207)"]},
+"2207-2": {"prefix": "선형계획문제", "body": ["[선형계획문제](../2207)"]},
+"2207-3": {"prefix": "가용해", "body": ["[가용해](../2207)"]},
+
+"2219": {"prefix": "베이불분포", "body": ["[베이불 분포](../2219)"]},
+"2221": {"prefix": "방정식폼", "body": ["[방정식 폼](../2221)"]},
+
+"2223-1": {"prefix": "기저-LP", "body": ["[기저](../2223)"]},
+"2223-2": {"prefix": "기저가용해", "body": ["[기저가용해](../2223)"]},
+"2223-3": {"prefix": "베이직", "body": ["[베이직](../2223)"]},
+
+"2228": {"prefix": "컨벡스 헐", "body": ["[컨벡스 헐](../2228)"]},
+"2239": {"prefix": "우도함수", "body": ["[우도함수](../2239)"]},
+"2247": {"prefix": "최소충분통계량", "body": ["[최소충분통계량](../2247)"]},
+"2249": {"prefix": "보조통계량", "body": ["[보조통계량](../2249)"]},
+"2251": {"prefix": "로케이션 패밀리", "body": ["[로케이션 패밀리](../2251)"]},
+"2253": {"prefix": "스케일 패밀리", "body": ["[스케일 패밀리](../2253)"]},
+"2255": {"prefix": "완비통계량", "body": ["[완비통계량](../2255)"]},
+"2270": {"prefix": "브랜칭 프로세스", "body": ["[브랜칭 프로세스](../2270)"]},
+
+"2272-1": {"prefix": "최선불편추정량", "body": ["[최선불편추정량](../2272)"]},
+"2272-2": {"prefix": "최소분산불편추정량", "body": ["[최소분산불편추정량](../2272)"]},
+"2272-3": {"prefix": "UMVUE", "body": ["[UMVUE](../2272)"]},
+
+"2283-1": {"prefix": "가설검정-수리통계", "body": ["[가설검정](../2283)"]},
+"2283-2": {"prefix": "기각역", "body": ["[기각역](../2283)"]},
+"2283-3": {"prefix": "귀무가설", "body": ["[귀무가설](../2283)"]},
+"2283-4": {"prefix": "대립가설", "body": ["[대립가설](../2283)"]},
+
+"2284": {"prefix": "전이확률", "body": ["[전이확률](../2284)"]},
+"2286": {"prefix": "연속마코프체인", "body": ["[연속마코프체인](../2286)"]},
+
+"2287-1": {"prefix": "우도비검정", "body": ["[우도비검정](../2287)"]},
+"2287-2": {"prefix": "우도비검정통계량", "body": ["[우도비검정통계량](../2287)"]},
+
+"2291": {"prefix": "검정력함수", "body": ["[검정력함수](../2291)"]},
+"2292": {"prefix": "스펙트럴 래디어스", "body": ["[스펙트럴 래디어스](../2292)"]},
+"2293": {"prefix": "최강력검정", "body": ["[최강력검정](../2293)"]},
+"2297": {"prefix": "단조우도비", "body": ["[단조우도비](../2297)"]},
+"2298": {"prefix": "R-모듈", "body": ["[R-모듈](../2298)"]},
+"2300": {"prefix": "F-벡터스페이스", "body": ["[F-벡터스페이스](../2300)"]},
+
+"2303-1": {"prefix": "네임드튜플", "body": ["[네임드튜플](../2303)"]},
+
+"2306": {"prefix": "프리그룹", "body": ["[프리 그룹](../2306)"]},
+"2308": {"prefix": "제로멀피즘", "body": ["[제로멀피즘](../2308)"]},
+
+"2310-1": {"prefix": "호몰로지그룹", "body": ["[호몰로지그룹](../2310)"]},
+"2310-2": {"prefix": "체인컴플렉스", "body": ["[체인컴플렉스](../2310)"]},
+
+"2315": {"prefix": "아핀독립", "body": ["[아핀독립](../2315)"]},
+
+"2316-1": {"prefix": "내장데이터", "body": ["[내장데이터](../2316)"]},
+"2316-2": {"prefix": "아이리스", "body": ["[아이리스 데이터](../2316)"]},
+
+"2317": {"prefix": "심플렉스", "body": ["[심플렉스](../2317)"]},
+"2321": {"prefix": "SEIR모델", "body": ["[SEIR모델](../2321)"]},
+"2323": {"prefix": "SIRV모델", "body": ["[SIRV모델](../2323)"]},
+"2325": {"prefix": "SIRD모델", "body": ["[SIRD모델](../2325)"]},
+
+"2327-1": {"prefix": "구간추정량", "body": ["[구간추정량](../2327)"]},
+"2327-2": {"prefix": "랜덤인터벌", "body": ["[랜덤 인터벌](../2327)"]},
+
+"2329-1": {"prefix": "신뢰구간", "body": ["[신뢰구간](../2329)"]},
+"2329-2": {"prefix": "신뢰집합", "body": ["[신뢰집합](../2329)"]},
+"2329-3": {"prefix": "커버리지확률", "body": ["[커버리지 확률](../2329)"]},
+
+"2334-1": {"prefix": "딕셔너리", "body": ["[딕셔너리](../2334)"]},
+"2334-2": {"prefix": "딕셔너리혹은태블로", "body": ["[딕셔너리 혹은 태블로](../2334)"]},
+
+"2336": {"prefix": "심플렉스메소드", "body": ["[심플렉스 메소드](../2336)"]},
+
+"2338-1": {"prefix": "페이즈1", "body": ["[페이즈 1](../2338)"]},
+"2338-2": {"prefix": "페이즈2", "body": ["[페이즈 2](../2338)"]},
+
+"2342-1": {"prefix": "사이클링", "body": ["[사이클링](../2342)"]},
+"2344-1": {"prefix": "브랜드룰", "body": ["[브랜드 룰](../2344)"]},
+"2348-1": {"prefix": "듀얼", "body": ["[듀얼](../2348)"]},
+
+"2364-1": {"prefix": "메타개체군모델", "body": ["[메타개체군 모델](../2364)"]},
+"2364-2": {"prefix": "패치", "body": ["[패치](../2364)"]},
+
+"2370-1": {"prefix": "약한위상", "body": ["[약한 위상](../2370)"]},
+
+"2372-1": {"prefix": "디스크", "body": ["[디스크](../2372)"]},
+"2372-2": {"prefix": "스피어", "body": ["[스피어](../2372)"]},
+"2372-3": {"prefix": "단위원-기하", "body": ["[단위원](../2372)"]},
+
+"2374-1": {"prefix": "컴플렉스", "body": ["[컴플렉스](../2374)"]},
+"2376-1": {"prefix": "CW컴플렉스", "body": ["[CW 컴플렉스](../2376)"]},
+"2377-1": {"prefix": "토러스", "body": ["[토러스](../2377)"]},
+"2379-1": {"prefix": "심플리셜컴플렉스", "body": ["[심플리셜 컴플렉스](../2379)"]},
+"2380-1": {"prefix": "리듀스", "body": ["[리듀스](../2380)"]},
+"2382-1": {"prefix": "브로드캐스트", "body": ["[브로드캐스트](../2382)"]},
+"2383-1": {"prefix": "심플리셜호몰로지그룹", "body": ["[심플리셜 호몰로지 그룹](../2383)"]},
+"2386-1": {"prefix": "베주정역", "body": ["[베주 정역](../2386)"]},
+"2388-1": {"prefix": "뱅 컨벤션", "body": ["[뱅 컨벤션](../2388)"]},
+"2389-1": {"prefix": "스미스노멀폼", "body": ["[스미스 노멀 폼](../2389)"]},
+"2393-1": {"prefix": "토션", "body": ["[토션](../2393)"]},
+"2399-1": {"prefix": "베티 수", "body": ["[베티 수](../2399)"]},
+"2400-1": {"prefix": "컨벡스함수", "body": ["[컨벡스 함수](../2400)"]},
+"2401-1": {"prefix": "비에토리스-립스 컴플렉스", "body": ["[비에토리스-립스 컴플렉스](../2401)"]},
+"2403-1": {"prefix": "체흐 컴플렉스", "body": ["[체흐 컴플렉스](../2403)"]},
+
+"2402-1": {"prefix": "서포트벡터머신", "body": ["[서포트벡터머신](../2402)"]},
+"2402-2": {"prefix": "SVM", "body": ["[SVM](../2402)"]},
+
+"2404-1": {"prefix": "라그랑주승수법", "body": ["[라그랑주 승수법](../2404)"]},
+"2406-1": {"prefix": "커널-머신러닝", "body": ["[커널](../2406)"]},
+"2408-1": {"prefix": "표현자 정리", "body": ["[표현자 정리](../2408)"]},
+"2405-1": {"prefix": "바운더리 행렬", "body": ["[바운더리 행렬](../2405)"]},
+"2409-1": {"prefix": "추상 심플리셜 컴플렉스", "body": ["[추상 심플리셜 컴플렉스](../2409)"]},
+
+"2411-1": {"prefix": "패스", "body": ["[패스](../2411)"]},
+"2411-2": {"prefix": "호모토피", "body": ["[호모토피](../2411)"]},
+
+"2413": {"prefix": "호모토피클래스", "body": ["[호모토피 클래스](../2413)"]},
+"2415": {"prefix": "기본군", "body": ["[기본군](../2415)"]},
+
+"2417-1": {"prefix": "리프트", "body": ["[리프트](../2417)"]},
+"2417-2": {"prefix": "커버링", "body": ["[커버링](../2417)"]},
+
+"2418-1": {"prefix": "데이터", "body": ["[데이터](../2418)"]},
+"2418-2": {"prefix": "모집단", "body": ["[모집단](../2418)"]},
+"2418-3": {"prefix": "표본", "body": ["[표본](../2418)"]},
+
+"2419-1": {"prefix": "리프팅정리", "body": ["[리프팅 정리](../2419)"]},
+
+"2420-1": {"prefix": "질적데이터", "body": ["[질적 데이터](../2420)"]},
+"2420-2": {"prefix": "양적데이터", "body": ["[양적 데이터](../2420)"]},
+"2420-3": {"prefix": "범주형데이터", "body": ["[범주형 데이터](../2420)"]},
+"2420-4": {"prefix": "범주", "body": ["[범주](../2420)"]},
+
+"2424-1": {"prefix": "통계학", "body": ["[통계학](../2424)"]},
+"2426-1": {"prefix": "도수", "body": ["[도수](../2426)"]},
+"2428-1": {"prefix": "계급", "body": ["[계급](../2428)"]},
+"2430-1": {"prefix": "막대그래프", "body": ["[막대그래프](../2430)"]},
+"2431-1": {"prefix": "호모토피타입", "body": ["[호모토피 타입](../2431)"]},
+
+"2432-1": {"prefix": "히스토그램", "body": ["[히스토그램](../2432)"]},
+"2432-2": {"prefix": "빈", "body": ["[빈](../2432)"]},
+
+"2436-1": {"prefix": "점도표", "body": ["[점도표](../2436)"]},
+"2436-2": {"prefix": "산점도", "body": ["[산점도](../2436)"]},
+
+"2438-1": {"prefix": "평균-기초통계", "body": ["[평균](../2438)"]},
+"2438-2": {"prefix": "표본평균", "body": ["[표본평균](../2438)"]},
+
+"2439-1": {"prefix": "등급모듈", "body": ["[등급모듈](../2439)"]},
+
+"2440-1": {"prefix": "통계량-기초통계", "body": ["[통계량](../2440)"]},
+"2440-2": {"prefix": "모수", "body": ["[모수](../2440)"]},
+"2440-3": {"prefix": "모평균", "body": ["[모평균](../2440)"]},
+"2440-4": {"prefix": "모분산", "body": ["[모분산](../2440)"]},
+
+"2441-1": {"prefix": "필터드 컴플렉스", "body": ["[필터드 컴플렉스](../2441)"]},
+
+"2442-1": {"prefix": "가설검정-기초통계", "body": ["[가설검정](../2442)"]},
+"2442-2": {"prefix": "검정통계량", "body": ["[검정통계량](../2442)"]},
+
+"2444-1": {"prefix": "중위수", "body": ["[중위수](../2444)"]},
+
+"2445-1": {"prefix": "퍼시스턴스 컴플렉스", "body": ["[퍼시스턴스 컴플렉스](../2445)"]},
+"2445-2": {"prefix": "퍼시스턴스 모듈", "body": ["[퍼시스턴스 모듈](../2445)"]},
+
+"2448-1": {"prefix": "분산-기초통계", "body": ["[분산](../2448)"]},
+"2448-2": {"prefix": "표본분산", "body": ["[표본분산](../2448)"]},
+"2448-3": {"prefix": "표본표준편차", "body": ["[표본표준편차](../2448)"]},
+
+"2450-1": {"prefix": "z-스코어", "body": ["[z-스코어](../2450)"]},
+"2450-2": {"prefix": "표준화", "body": ["[표준화](../2450)"]},
+
+"2451-1": {"prefix": "원주율", "body": ["[원주율](../2451)"]},
+
+"2452-1": {"prefix": "이상치", "body": ["[이상치](../2452)"]},
+"2453-1": {"prefix": "구간", "body": ["[구간](../2453)"]},
+"2456-1": {"prefix": "자유도", "body": ["[자유도](../2456)"]},
+"2458-1": {"prefix": "회귀계수", "body": ["[회귀계수](../2458)"]},
+
+"2462-1": {"prefix": "표준오차", "body": ["[표준오차](../2462)"]},
+
+"2465-1": {"prefix": "상수", "body": ["[상수](../2465)"]},
+"2465-2": {"prefix": "상수함수", "body": ["[상수함수](../2465)"]},
+
+"2467-1": {"prefix": "유계-복소해석", "body": ["[유계](../2467)"]},
+"2467-2": {"prefix": "복소영역", "body": ["[복소영역](../2467)"]},
+"2467-3": {"prefix": "컴팩트-복소해석", "body": ["[컴팩트](../2467)"]},
+"2467-4": {"prefix": "단순연결영역", "body": ["[단순연결영역](../2467)"]},
+
+"2470-1": {"prefix": "가중평균", "body": ["[가중평균](../2470)"]},
+"2470-2": {"prefix": "가중치", "body": ["[가중치](../2470)"]},
+
+"2472-1": {"prefix": "합동분산", "body": ["[합동분산](../2472)"]},
+"2472-2": {"prefix": "표본합동분산", "body": ["[표본합동분산](../2472)"]},
+
+"2473-1": {"prefix": "복소함수", "body": ["[복소함수](../2473)"]},
+"2473-2": {"prefix": "실함수", "body": ["[실함수](../2473)"]},
+
+"2475-1": {"prefix": "해", "body": ["[해](../2475)"]},
+"2477-1": {"prefix": "고정점", "body": ["[고정점](../2477)"]},
+"2480-1": {"prefix": "다항분포", "body": ["[다항분포](../2480)"]},
+
+"2487-1": {"prefix": "피어슨카이제곱검정통계량", "body": ["[피어슨 카이제곱 검정통계량](../2487)"]},
+"2488-1": {"prefix": "폰미제스분포", "body": ["[폰 미제스 분포](../2488)"]},
+
+"2489-1": {"prefix": "다항실험", "body": ["[다항실험](../2489)"]},
+"2489-2": {"prefix": "분할표", "body": ["[분할표](../2489)"]},
+
+"2491-1": {"prefix": "적합도검정", "body": ["[적합도 검정](../2491)"]},
+"2492-1": {"prefix": "공간데이터", "body": ["[공간데이터](../2492)"]},
+
+"2494-1": {"prefix": "공간과정", "body": ["[공간과정](../2494)"]},
+"2494-2": {"prefix": "랜덤필드", "body": ["[랜덤필드](../2494)"]},
+
+"2496-1": {"prefix": "코배리오그램", "body": ["[코배리오그램](../2496)"]},
+"2496-2": {"prefix": "정상적공간과정", "body": ["[정상적 공간과정](../2496)"]},
+"2496-3": {"prefix": "정상성", "body": ["[정상성](../2496)"]},
+
+"2498-1": {"prefix": "배리오그램", "body": ["[배리오그램](../2498)"]},
+
+"2513-1": {"prefix": "희박", "body": ["[희박](../2513)"]},
+"2513-2": {"prefix": "스파스", "body": ["[스파스](../2513)"]},
+
+"2515-1": {"prefix": "제곱근행렬", "body": ["[제곱근 행렬](../2515)"]},
+
+"2521-1": {"prefix": "크리깅", "body": ["[크리깅](../2521)"]},
+"2530-1": {"prefix": "조화평균", "body": ["[조화평균](../2530)"]},
+
+"2538-1": {"prefix": "독립변수", "body": ["[독립변수](../2538)"]},
+"2538-2": {"prefix": "종속변수", "body": ["[종속변수](../2538)"]},
+
+"2540-1": {"prefix": "분류문제", "body": ["[분류문제](../2540)"]},
+"2540-2": {"prefix": "회귀문제", "body": ["[회귀문제](../2540)"]},
+
+"2545-1": {"prefix": "정밀도", "body": ["[정밀도](../2545)"]},
+"2547-1": {"prefix": "재현도", "body": ["[재현도](../2547)"]},
+"2549-1": {"prefix": "F1스코어", "body": ["[F1 스코어](../2549)"]},
+"2552-1": {"prefix": "스플랫", "body": ["[스플랫](../2552)"]},
+"2563-1": {"prefix": "스파스회귀", "body": ["[스파스 회귀](../2563)"]},
+"2567-1": {"prefix": "리지회귀", "body": ["[리지 회귀](../2567)"]},
+
+"2569-1": {"prefix": "쓰레숄딩", "body": ["[쓰레숄딩](../2569)"]},
+"2569-2": {"prefix": "쓰레숄드", "body": ["[쓰레숄드](../2569)"]},
+
+"2571-1": {"prefix": "라쏘회귀", "body": ["[라쏘 회귀](../2571)"]},
+"2575-1": {"prefix": "압축센싱", "body": ["[압축 센싱](../2575)"]},
+"2576-1": {"prefix": "클로즈드폼", "body": ["[클로즈드 폼](../2576)"]},
+"2583-1": {"prefix": "다가사상", "body": ["[다가사상](../2583)"]},
+"2589-1": {"prefix": "넌스무스", "body": ["[넌스무스](../2589)"]},
+"2594-1": {"prefix": "하이퍼파라미터", "body": ["[하이퍼파라미터](../2594)"]},
+"2608-1": {"prefix": "바이퍼케이션", "body": ["[바이퍼케이션](../2608)"]},
+"2610-1": {"prefix": "노멀폼", "body": ["[노멀 폼](../2610)"]},
+
+
+"3001-1": {"prefix": "항등행렬", "body": ["[항등행렬](../3001)"]},
+
+"3002-1": {"prefix": "전치행렬", "body": ["[전치행렬](../3002)"]},
+"3002-2": {"prefix": "트랜스포즈", "body": ["[트랜스포즈](../3002)"]},
+
+"3003-1": {"prefix": "역행렬", "body": ["[역행렬](../3003)"]},
+"3003-2": {"prefix": "가역행렬", "body": ["[가역행렬](../3003)"]},
+
+"3005-1": {"prefix": "대칭행렬", "body": ["[대칭행렬](../3005)"]},
+"3006-1": {"prefix": "켤레전치행렬", "body": ["[켤레전치행렬](../3006)"]},
+"3007-1": {"prefix": "에르미트행렬", "body": ["[에르미트행렬](../3007)"]},
+"3008-1": {"prefix": "유니터리행렬", "body": ["[유니터리행렬](../3008)"]},
+"3009-1": {"prefix": "직교행렬", "body": ["[직교행렬](../3009)"]},
+"3011-1": {"prefix": "내적-행렬", "body": ["[행렬내적](../3011)"]},
+
+"3013-1": {"prefix": "행렬방정식", "body": ["[행렬방정식](../3013)"]},
+"3013-2": {"prefix": "연립방정식", "body": ["[연립방정식](../3013)"]},
+
+"3017-1": {"prefix": "기저", "body": ["[기저](../3017)"]},
+"3017-2": {"prefix": "베이시스", "body": ["[베이시스](../3017)"]},
+
+"3018-1": {"prefix": "차원", "body": ["[차원](../3018)"]},
+"3019-1": {"prefix": "가우스소거법", "body": ["[가우스소거법](../3019)"]},
+
+"3021": {"prefix": "랭크-행렬", "body": ["[랭크](../3021)"]},
+"3025": {"prefix": "행렬변환", "body": ["[행렬변환](../3025)"]},
+
+"3026-1": {"prefix": "선형변환", "body": ["[선형변환](../3026)"]},
+
+"3032": {"prefix": "함수공간-해석", "body": ["[함수공간](../3032)"]},
+
+"3036-1": {"prefix": "편미분", "body": ["[편미분](../3036)"]},
+"3036-2": {"prefix": "편도함수", "body": ["[편도함수](../3036)"]},
+
+"3037-1": {"prefix": "선형함수", "body": ["[선형함수](../3037)"]},
+"3037-2": {"prefix": "선형성", "body": ["[선형성](../3037)"]},
+
+"3045-1": {"prefix": "직교-내적공간", "body": ["[직교](../3045)"]},
+"3045-2": {"prefix": "정규직교-내적공간", "body": ["[정규직교](../3045)"]},
+
+"3048-1": {"prefix": "합성함수", "body": ["[합성함수](../3048)"]},
+"3071-1": {"prefix": "커널-선형대수", "body": ["[커널](../3071)"]},
+"3083-1": {"prefix": "절대값", "body": ["[절대값](../3083)"]},
+"3084-1": {"prefix": "회전변환", "body": ["[회전변환](../3084)"]},
+
+"3094-1": {"prefix": "이상적분", "body": ["[이상적분](../3094)"]},
+
+"3124-1": {"prefix": "포함함수", "body": ["[포함함수](../3124)"]},
+"3124-2": {"prefix": "인클루젼", "body": ["[인클루젼](../3124)"]},
+
+
+"3134-1": {"prefix": "연쇄법칙", "body": ["[연쇄법칙](../3134)"]},
+"3134-2": {"prefix": "체인룰", "body": ["[체인룰](../3134)"]},
+
+"3147-1": {"prefix": "부호", "body": ["[부호](../3147)"]},
+
+"3167": {"prefix": "항등함수", "body": ["[항등함수](../3167)"]},
+
+"3123-1": {"prefix": "제한함수", "body": ["[제한함수](../3123)"]},
+"3123-2": {"prefix": "확장함수", "body": ["[확장함수](../3123)"]},
+
+"3233-1": {"prefix": "히트맵", "body": ["[히트맵](../3233)"]},
+"3233-2": {"prefix": "서피스", "body": ["[서피스](../3233)"]},
+
+"3265-1": {"prefix": "과소결정계", "body": ["[과소결정계](../3265)"]},
+"3265-2": {"prefix": "과도결정계", "body": ["[과도결정계](../3265)"]},
+
+"3281-1": {"prefix": "범함수", "body": ["[범함수](../3281)"]},
+"3281-2": {"prefix": "펑셔널", "body": ["[펑셔널](../3281)"]},
+
+"3305-1": {"prefix": "삼각행렬", "body": ["[삼각행렬](../3305)"]},
+"3305-2": {"prefix": "상삼각행렬", "body": ["[상삼각행렬](../3305)"]},
+"3305-3": {"prefix": "하삼각행렬", "body": ["[하삼각행렬](../3305)"]},
+
+"3313-1": {"prefix": "PINN", "body": ["[PINN](../3313)"]},
+
+"3323-1": {"prefix": "조던블럭폼", "body": ["[조던블럭폼](../3323)"]},
+"3323-2": {"prefix": "블럭행렬", "body": ["[블럭행렬](../3323)"]},
+
+"3362-1": {"prefix": "렐루", "body": ["[렐루](../3362)"]},
+"3388-1": {"prefix": "일행렬", "body": ["[일행렬](../3388)"]},
+"3394-1": {"prefix": "영행렬", "body": ["[영행렬](../3394)"]},
+"3492-1": {"prefix": "고속푸리에변환", "body": ["[고속 푸리에 변환](../3492)"]},
+"3494-1": {"prefix": "유한차분법", "body": ["[유한차분법](../3494)"]},
+"3512-1": {"prefix": "이차 형식", "body": ["[이차 형식](../3512)"]},
+"3563-1": {"prefix": "차원축소", "body": ["[차원축소](../3563)"]},
+
+
+"0008-1": {"prefix": "콘", "body": ["[콘](../8)"]},
+
+"0067-1": {"prefix": "행렬지수", "body": ["[행렬지수](../67)"]},
+"0067-2": {"prefix": "행렬로그", "body": ["[행렬로그](../67)"]},
+
+"0068-1": {"prefix": "레이아웃", "body": ["[레이아웃](../68)"]},
+"0077-1": {"prefix": "트랜스크리티컬 바이퍼케이션", "body": ["[트랜스크리티컬 바이퍼케이션](../77)"]},
+"0078-1": {"prefix": "해밍 거리", "body": ["[해밍 거리](../78)"]},
+"0079-1": {"prefix": "새들-노드 바이퍼케이션", "body": ["[새들-노드 바이퍼케이션](../79)"]},
+"0270-1": {"prefix": "변분 방정식", "body": ["[변분 방정식](../270)"]},
+"0272-1": {"prefix": "랴푸노프 스펙트럼", "body": ["[랴푸노프 스펙트럼](../272)"]},
+"0286-1": {"prefix": "정규행렬", "body": ["[정규행렬](../286)"]},
+"0294-1": {"prefix": "홀링타입", "body": ["[홀링타입](../294)"]},
+"0326-1": {"prefix": "SNA", "body": ["[SNA](../326)"]},
+"0322-1": {"prefix": "KAN", "body": ["[KAN](../322)"]},
+"0368-1": {"prefix": "자기유사 집합", "body": ["[자기유사 집합](../368)"]},
+"0370-1": {"prefix": "하우스도르프 차원", "body": ["[하우스도르프 차원](../370)"]},
+"0387-1": {"prefix": "폰 코흐 커브", "body": ["[폰 코흐 커브](../387)"]},
+"0397-1": {"prefix": "유사성 차원", "body": ["[유사성 차원](../397)"]},
+"0442-1": {"prefix": "프랙털", "body": ["[프랙털](../442)"]},
+"0584-1": {"prefix": "박스카운팅차원", "body": ["[박스카운팅차원](../584)"]},
+"0595-1": {"prefix": "랜덤필드", "body": ["[랜덤필드](../595)"]},
+"0617-1": {"prefix": "리들드 베이신", "body": ["[리들드 베이신](../617)"]},
+"0671-1": {"prefix": "이케다 맵", "body": ["[이케다 맵](../671)"]},
+"0708-1": {"prefix": "차원의 저주", "body": ["[차원의 저주](../708)"]},
+"0718-1": {"prefix": "망델브로 집합", "body": ["[망델브로 집합](../718)"]},
+"0759-1": {"prefix": "준주기", "body": ["[준주기](../759)"]},
+"0768-1": {"prefix": "콰지피리어딕 오빗", "body": ["[콰지피리어딕 오빗](../768)"]},
+"0815-1": {"prefix": "횡단", "body": ["[횡단](../815)"]},
+"0816-1": {"prefix": "이상한 어트랙터", "body": ["[이상한 어트랙터](../816)"]},
+"0869-1": {"prefix": "불연속", "body": ["[불연속](../869)"]},
+"0882-1": {"prefix": "독립성 검정", "body": ["[독립성 검정](../882)"]},
+"0894-1": {"prefix": "동질성 검정", "body": ["[동질성 검정](../894)"]},
+"2631-1": {"prefix": "랜덤벡터 이차형식", "body": ["[랜덤벡터 이차형식](../2631)"]},
+"2634-1": {"prefix": "퇴플리츠 행렬", "body": ["[퇴플리츠 행렬](../2634)"]},
+"2659-1": {"prefix": "실험설계", "body": ["[실험설계](../2659)"]},
+"2661-1": {"prefix": "아노바", "body": ["[아노바](../2661)"]},
+"2663-1": {"prefix": "아노바 테이블", "body": ["[아노바 테이블](../2663)"]},
+"2667-1": {"prefix": "일원분산분석", "body": ["[일원분산분석](../2667)"]},
+"2669-1": {"prefix": "이원분산분석", "body": ["[이원분산분석](../2669)"]},
+"2675-1": {"prefix": "비모수 통계학", "body": ["[비모수 통계학](../2675)"]},

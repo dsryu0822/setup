@@ -45,8 +45,8 @@
 			"body": [
 				"$$",
 				"\\begin{align*}",
-				"H\\_{0} :& \\theta \\in \\Theta",
-				"\\\\\\ H\\_{1} :& \\theta \\notin \\Theta",
+				"H_{0} :& \\theta \\in \\Theta",
+				"\\\\\\ H_{1} :& \\theta \\notin \\Theta",
 				"\\end{align*}",
 				"$$",
 				]
@@ -84,8 +84,8 @@
 		 "be": {"prefix":  "be", "body": [ "\\begin{$1}$0\\end{$1}"]},
 		"$be": {"prefix": "$be", "body": ["$\\begin{$1}$0\\end{$1}"]},
 		
-		 "\\sum": {"prefix": "\\sum", "body": ["\\sum\\_{k=1}^{n}"]}, "$\\sum": {"prefix": "$\\sum", "body": ["$\\sum\\_{k=1}^{n}"]},
-		"\\prod": {"prefix": "\\prod", "body": ["\\prod\\_{k=1}^{n}"]}, "$\\prod": {"prefix": "$\\prod", "body": ["$\\prod\\_{k=1}^{n}"]},
+		 "\\sum": {"prefix": "\\sum", "body": ["\\sum_{k=1}^{n}"]}, "$\\sum": {"prefix": "$\\sum", "body": ["$\\sum_{k=1}^{n}"]},
+		"\\prod": {"prefix": "\\prod", "body": ["\\prod_{k=1}^{n}"]}, "$\\prod": {"prefix": "$\\prod", "body": ["$\\prod_{k=1}^{n}"]},
 		
 		"bar": {"prefix": "bar",   "body": ["\\overline{$0}"]}, "$bar": {"prefix": "$bar",   "body": ["$\\overline{$0}"]},
 		"til": {"prefix": "til",   "body": ["\\widetilde{$0}"]}, "$til": {"prefix": "$til",   "body": ["$\\widetilde{$0}"]},
@@ -124,12 +124,12 @@
 		"Im": {"prefix": "Im", "body": ["\\text{Im}"]}, "$Im": {"prefix": "$Im", "body": ["$\\text{Im}"]},
 		"s.e.": {"prefix": "se", "body": ["\\text{s.e.}"]}, "$s.e.": {"prefix": "$se", "body": ["$\\text{s.e.}"]},
 		
-		"R0": {"prefix": "R0", "body": ["\\mathcal{R}\\_{0}"]},
+		"R0": {"prefix": "R0", "body": ["\\mathcal{R}_{0}"]},
 		
 		"Dto": {"prefix": "Dto", "body": ["\\overset{D}{\\to}"]},
 		"Pto": {"prefix": "Pto", "body": ["\\overset{P}{\\to}"]},
 		"Wto": {"prefix": "Wto", "body": ["\\overset{W}{\\to}"]},
-		"bto": {"prefix": "bto", "body": ["\\overset{\\partial\\_{$1}}{\\longrightarrow}"]},
+		"bto": {"prefix": "bto", "body": ["\\overset{\\partial_{$1}}{\\longrightarrow}"]},
 		
 		"iid": {"prefix": "iid", "body": ["\\overset{\\text{iid}}{\\sim}"]},
 		
@@ -179,17 +179,17 @@
 			"\\end{bmatrix}"]},
 		
 		"vector": {"prefix": "vector", "body": [
-			"\\begin{bmatrix} $1\\_{1} \\\\\\ \\vdots \\\\\\ $1\\_{n} \\end{bmatrix}$0"]},
+			"\\begin{bmatrix} $1_{1} \\\\\\ \\vdots \\\\\\ $1_{n} \\end{bmatrix}$0"]},
 		
 		
 		"od": {"prefix": "od", "body": ["{{ d } \\over { d t }}"]}, "$od": {"prefix": "$od", "body": ["${{ d } \\over { d t }}"]}, 
 		"pd": {"prefix": "pd", "body": ["{{ \\partial } \\over { \\partial t }}"]}, "$pd": {"prefix": "$pd", "body": ["${{ \\partial } \\over { \\partial t }}"]}, 
-		"cdots": {"prefix": "cdots", "body": ["$1\\_{1} , \\cdots , $1\\_{n}$0"]}, "$cdots": {"prefix": "$cdots", "body": ["$$1\\_{1} , \\cdots , $1\\_{n}$0"]}, 
+		"cdots": {"prefix": "cdots", "body": ["$1_{1} , \\cdots , $1_{n}$0"]}, "$cdots": {"prefix": "$cdots", "body": ["$$1_{1} , \\cdots , $1_{n}$0"]}, 
 		
 		"normal": {"prefix": "normal", "body": ["N \\left( \\mu , \\sigma^{2} \\right)$"]}, "$normal": {"prefix": "$normal", "body": ["\\$N \\left( \\mu , \\sigma^{2} \\right)"]},
-		"chisq": {"prefix": "chisq", "body": ["\\chi\\_{$0}^{2}"]}, "$chisq": {"prefix": "$chisq", "body": ["$\\chi\\_{$0}^{2}$"]}, 
+		"chisq": {"prefix": "chisq", "body": ["\\chi_{$0}^{2}"]}, "$chisq": {"prefix": "$chisq", "body": ["$\\chi_{$0}^{2}$"]}, 
 		
-		"pi1": {"prefix": "\\pi1", "body": ["\\pi\\_{1} \\left( X, x\\_{0} \\right)"]}, "$pi1": {"prefix": "$\\pi1", "body": ["$\\pi\\_{1} \\left( X, x\\_{0} \\right)$"]}, 
+		"pi1": {"prefix": "\\pi1", "body": ["\\pi_{1} \\left( X, x_{0} \\right)"]}, "$pi1": {"prefix": "$\\pi1", "body": ["$\\pi_{1} \\left( X, x_{0} \\right)$"]}, 
 		
 		"oper": {"prefix": "\\oper", "body": ["\\operatorname{$0}"]}, "$oper": {"prefix": "$\\oper", "body": ["$\\operatorname{$0}$"]}, 
 }
